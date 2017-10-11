@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>19 自定义行列数的隔行变色表格效果</title>
+
+    <!--<script type="text/javascript">
+    
+    	var x = prompt('请输入行数');
+    	var y = prompt('请输入列数');
+
+		document.write('<table border="1" width="900">');
+		for(var i=1;i<=x;i++){
+			document.write('<tr align="center">');
+			for(var j=1;j<=y;j++){				
+				if((i%2)==0){
+					document.write('<td bgcolor="blue">'+i+'行'+j+'列 </td>');
+				}else{
+					document.write('<td>'+i+'行'+j+'列 </td>');
+				}
+			}
+			document.write('</tr>');			
+		}
+		document.write('</table>');
+	
+    </script>-->
+
+</head>
+<body>
+
+	<table border="1" width="900">
+		<tr align="center">
+			<td bgcolor="red"></td>
+		</tr>
+	</table>
+	
+	<script type="text/javascript">
+    
+    	var x = prompt('请输入行数');
+    	var y = prompt('请输入列数');
+
+		document.write('<table border="1" width="900">');
+		for(var i=1;i<=x;i++){
+			document.write('<tr align="center">');
+			for(var j=1;j<=y;j++){				
+				if((i%2)==0){
+					document.write('<td bgcolor="blue">'+i+'行'+j+'列 </td>');
+				}else{
+					document.write('<td>'+i+'行'+j+'列 </td>');
+				}
+			}
+			document.write('</tr>');			
+		}
+		document.write('</table>');
+	
+    </script>
+
+</body>
+</html>

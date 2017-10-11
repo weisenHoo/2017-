@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>04 html5新增表单属性2</title>
+		
+	</head>
+	<body>
+		
+		<input type="text" list="num" />
+		<datalist id="num">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</datalist>
+		<br /><br />
+		
+		<!--表单自动对焦-->
+		<form action="1.php" method="post">
+			<input type="name" autofocus />
+			<input type="submit" />
+		</form>
+		<br /><br />
+		
+		<!--from属性-->
+		<from action="" id="biaodan">
+			用户名：<input type="text" />
+			密码：<input type="password" />
+			<input type="submit" />
+		</from>
+		邮箱：<input type="email" form="biaodan" />
+		<br /><br />
+		
+		<!--multiple-->
+		<input type="file" multiple="" />
+		<br /><br />
+		
+		<!--表单提示文字-->
+		<input type="text" placeholder="请输入内容" />
+		<br /><br />
+		
+		<!--pattern-->
+		<form action="" method="post">
+			<input type="text" placeholder="表单内容不能为空" required="" />
+			<input type="text" pattern="\d\d\d\d" />
+			<input type="submit" />
+		</form>
+		
+	</body>
+</html>

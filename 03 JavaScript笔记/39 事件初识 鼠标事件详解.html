@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>39 事件初识 鼠标事件详解</title>
+    
+    <script type="text/javascript">
+
+//		张三看见李四,然后打了一顿		
+//		按了一下开关,灯就亮了
+
+//		事件触发条件 - 看见
+//		事件源 - 李四
+//		事件处理程序 - 打了一顿
+
+
+//		怎么样了 - 谁 , - 然后怎么怎么样
+//		怎么样了:触发条件
+//		谁:事件源
+//		然后怎么怎么样了:事件处理程序
+		
+    </script>
+    
+    <script type="text/javascript">
+	
+//		事件初识
+//		function dj(){
+////			alert('你好！');
+//			location.href = 'https://www.baidu.com/';
+//		}
+
+
+//		需要用js操作body里面的元素的时候,就要写window.onload
+		window.onload = function(){
+			
+//			常用的鼠标事件
+//			onclick			鼠标单击事件
+//			ondblclick		鼠标双击事件
+//			onmousedown		鼠标按下时的事件
+//			onmouseup		鼠标抬起时的事件
+//			onmousemove		鼠标移动事件,在内部移动也触发
+//			onmouseover		鼠标移入事件
+//			onmouseout		鼠标离开时的事件
+
+		
+//			鼠标事件演示
+
+		
+//			单击事件
+//			抓到id是hd的元素,然后绑定点击事件
+//			document.getElementById("hd").onclick = function(){
+//				alert('后盾人，人人做后盾');
+//			}	
+			
+//			双击事件
+//			document.getElementById("hd").ondblclick = function(){
+//				alert('后盾人，人人做后盾');
+//			}
+
+//			鼠标按下事件(拖拽的时候使用)
+//			document.getElementById("hd").onmousedown = function(){
+//				alert('后盾人，人人做后盾');
+//			}
+
+//			鼠标抬起事件
+//			document.getElementById("hd").onmouseup = function(){
+//				alert('后盾人，人人做后盾');
+//			}
+
+//			鼠标移动事件(放大镜效果)
+//			document.getElementById("hd").onmousemove = function(){
+//				alert('后盾人，人人做后盾');
+//			}
+
+//			鼠标移入事件
+//			document.getElementById("hd").onmouseover = function(){
+//				alert('后盾人，人人做后盾');
+//			}
+
+//			鼠标离开时的事件
+			document.getElementById("hd").onmouseout = function(){
+				alert('后盾人，人人做后盾');
+			}
+		
+		}
+		
+    </script>
+    
+    <style type="text/css">
+    	#hd {
+    		width: 500px;
+    		height: 300px;
+    		background: purple;
+    		margin: 0px auto;
+    	}
+    </style>
+
+</head>
+<body>
+
+	<!--<div id="hd" onclick="dj()"></div>-->
+	<div id="hd"></div>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>62 获得元素序号 tab切换效果</title>
+	
+	<!--<style type="text/css">
+		
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		img{
+			float: left;
+			width: 200px;
+			height: 200px;
+			margin: 5px;
+		}
+		
+	</style>
+	
+	<script type="text/javascript">
+		
+		window.onload = function(){
+			
+//			抓到所有图片
+			var imgs = document.getElementsByTagName('img')
+//			循环所有的图片,给每张图片都加单击事件
+			for(var i=0;i<imgs.length;i++){
+//				给i号图片添加一个变量,用来记录序号
+				imgs[i].xuhao = i;
+//				给号图片加单击事件
+				imgs[i].onclick = function(){
+				
+//					this.style.visibility = 'hidden';
+					alert(this.xuhao);
+					
+				}
+				
+			}
+			
+			
+		}
+		
+	</script>-->
+	
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		#tad{
+			width: 600px;
+			height: 500px;
+			border: 5px solid blueviolet;
+			margin: 0 auto;
+			position: relative;
+		}
+		#tad ul li{
+			list-style: none;
+			float: left;
+			width: 200px;
+			height: 50px;
+			line-height: 50px;
+			font-size: 30px;
+			color: white;
+			text-align: center;
+			cursor: pointer;
+		}
+		#tad .con{
+			width: 580px;
+			height: 430px;
+			position: absolute;
+			left: 10px;
+			top: 60px;
+			display: none;
+		}
+	</style>
+	
+	<script type="text/javascript">
+		window.onload = function(){
+			var tad = document.getElementById('tad');
+			var lis = tad.getElementsByTagName('li');
+			var cons = document.getElementsByClassName('con');
+			
+//			循环,给li加单击事件
+			for(var i=0;i<lis.length;i++){
+//				给i号li加序号
+				lis[i].xuhao = i;			
+//				给i号li加单击事件
+				lis[i].onmousemove = function(){
+//					让所有的con隐藏
+					for(var i=0;i<lis.length;i++){
+						cons[i].style.display = 'none';
+					}
+//					让this.xuhao对应的con显示
+					cons[this.xuhao].style.display = 'block';
+				}
+			}
+		}
+	</script>
+	
+</head>
+<body>
+	
+	<!--<div id="hd"></div>-->
+	
+	<!--img[src=images/$$.jpg]*12-->
+	<!--<img src="images/0.jpg" alt="" />
+	<img src="images/1.jpg" alt="" />
+	<img src="images/2.jpg" alt="" />
+	<img src="images/3.jpg" alt="" />
+	<img src="images/4.jpg" alt="" />
+	<img src="images/5.jpg" alt="" />
+	<img src="images/6.jpg" alt="" />
+	<img src="images/7.jpg" alt="" />
+	<img src="images/8.jpg" alt="" />
+	<img src="images/9.jpg" alt="" />
+	<img src="images/10.jpg" alt="" />
+	<img src="images/11.jpg" alt="" />	-->
+	
+	<div id="tad">
+		<ul>
+			<li style="background: dodgerblue;">新闻</li>
+			<li style="background: orangered;">图片</li>
+			<li style="background: forestgreen;">军事</li>
+		</ul>
+		<div class="con" style="background: dodgerblue;display: block;"></div>
+		<div class="con" style="background: orangered;"></div>
+		<div class="con" style="background: forestgreen;"></div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>12 canvas写入图像</title>
+		
+		<style type="text/css">
+			canvas {
+				background: #272822;
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+
+		<canvas id="canvas" width="900" height="600"></canvas>
+		<br />
+		<img src="gundan.jpg" id="gundan" />
+		<script type="text/javascript">
+//			抓到画板
+			var canvas = document.getElementById('canvas');
+//			获得绘画环境
+			var cv = canvas.getContext('2d');
+			
+			var gundan = document.getElementById('gundan');
+			
+//			等图片加载完毕后
+			gundan.onload = function(){
+//				将图像写入到画板中
+//				这种写法:
+//				第一个参数指定图像资源
+//				第二个和第三个参数指定图像在画板中的位置
+//				cv.drawImage(gundan,100,50);
+
+//				第三个和第四个参数是指定图像在画板中的位置
+//				cv.drawImage(gundan,100,50,200,100);				
+
+//				第一个参数指定图像资源
+//				第二个和第三个参数用来指定从图片的哪个位置开始裁切
+//				第四个和第五个参数用来指定在图片上裁切多大区域
+//				第六个和第七个参数用来指定裁切出来的区域要放在画板的什么位置
+//				第八个和第九个参数用来指定裁切出来的区域在画板中呈现的大小
+				cv.drawImage(gundan,10,10,200,200,150,150,400,400);				
+			}
+
+			
+		</script>
+		
+	</body>
+</html>

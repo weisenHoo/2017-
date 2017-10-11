@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>29 用构造函数的方式创建对象 修改和增加属性方法</title>
+    
+    <style type="text/css">
+    	body {
+    		padding: 10px;
+    	}
+    	div {
+    		padding: 20px 0px;
+    	}
+    </style>
+    
+    <script type="text/javascript">
+    	
+		function pgsj(){
+			this.size = '5.5寸';
+			this.color = '土豪金';
+			this.weight = '200g';
+			this.price = '8000元';
+			this.call = function(){
+				alert('能打电话');
+			}
+		}
+    	
+    </script>
+</head>
+<body>
+
+	<div>
+		<script type="text/javascript">
+		
+			var iphone9 = new pgsj();
+			document.write(iphone9.color);
+			iphone9.huo();
+	    	
+	    </script>
+	</div>
+	
+	<div>
+		<script type="text/javascript">
+		
+			var iphone92 = new pgsj();
+//			修改属性里面的内容
+			iphone92.size = '6寸';
+//			document.write(iphone92.size);
+//			新增属性
+			iphone92.yan = '挂绳子的眼';
+//			document.write(iphone92.yan);
+			iphone92.huo = function(){
+				alert('能点火');
+			}
+			iphone92.huo();			
+	    	
+	    </script>
+	</div>
+
+</body>
+</html>

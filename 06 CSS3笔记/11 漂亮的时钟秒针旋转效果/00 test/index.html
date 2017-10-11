@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style type="text/css">
+			
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			#shizhong {
+				width: 800px;
+				height: 800px;
+				overflow: hidden;
+				/*background: url(tx.jpg) no-repeat;
+				background-size: 100%;*/
+				/*border: 1px solid black;*/
+				border-radius: 50%;
+				margin: 80px auto;	
+				position: relative;		
+				
+				transform: scale(0.5);	
+			}
+			#shizhong ul {
+				width: 800px;
+				height: 800px;
+				overflow: hidden;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			#shizhong ul:nth-child(1) li {
+				list-style: none;
+				width: 8px;
+				height: 800px;
+				overflow: hidden;
+				margin-left: -4px;
+				/*outline: 1px solid black;*/
+				position: absolute;
+				left: 50%;
+				top: 0px;
+			}
+			#shizhong ul:nth-child(1) li:nth-child(1) {
+				transform: rotate(0deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(2) {
+				transform: rotate(6deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(3) {
+				transform: rotate(12deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(4) {
+				transform: rotate(18deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(5) {
+				transform: rotate(24deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(6) {
+				transform: rotate(30deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(7) {
+				transform: rotate(36deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(8) {
+				transform: rotate(42deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(9) {
+				transform: rotate(48deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(10) {
+				transform: rotate(54deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(11) {
+				transform: rotate(60deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(12) {
+				transform: rotate(66deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(13) {
+				transform: rotate(72deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(14) {
+				transform: rotate(78deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(15) {
+				transform: rotate(84deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(16) {
+				transform: rotate(90deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(17) {
+				transform: rotate(96deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(18) {
+				transform: rotate(102deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(19) {
+				transform: rotate(108deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(20) {
+				transform: rotate(114deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(21) {
+				transform: rotate(120deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(22) {
+				transform: rotate(126deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(23) {
+				transform: rotate(132deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(24) {
+				transform: rotate(138deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(25) {
+				transform: rotate(144deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(26) {
+				transform: rotate(150deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(27) {
+				transform: rotate(156deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(28) {
+				transform: rotate(162deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(29) {
+				transform: rotate(168deg);
+			}
+			#shizhong ul:nth-child(1) li:nth-child(30) {
+				transform: rotate(174deg);
+			}
+			
+			#shizhong ul:nth-child(1) li b {
+				display: block;
+				float: left;
+				width: 4px;
+				height: 20px;
+				overflow: hidden;
+				background: black;
+				margin-left: -2px;
+				position: absolute;
+				left: 50%;
+			}
+			#shizhong ul:nth-child(1) li b:nth-child(2) {
+				bottom: 0px;
+			}
+			
+			#shizhong ul:nth-child(1) li:nth-child(1) b,
+			#shizhong ul:nth-child(1) li:nth-child(6) b,
+			#shizhong ul:nth-child(1) li:nth-child(11) b,
+			#shizhong ul:nth-child(1) li:nth-child(16) b,
+			#shizhong ul:nth-child(1) li:nth-child(21) b,
+			#shizhong ul:nth-child(1) li:nth-child(26) b {
+				width: 6px;
+				height: 40px;
+				margin-left: -3px;
+			}
+			
+			
+			#shizhong ul:nth-child(2) li {
+				list-style: none;
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				overflow: hidden;
+				/*border: 1px solid black;*/
+				margin-left: -50px;
+				margin-right: -50px;
+				margin-top: -50px;
+				margin-bottom: -50px;
+				text-align: center;
+				
+				color: black;
+				font-size: 72px;
+				font-weight: normal;
+				font-family: arial;
+				
+				position: absolute;
+			}
+			#shizhong ul:nth-child(2) li:nth-child(1) {
+				right: 250px;
+				top: 140px;
+			}
+			#shizhong ul:nth-child(2) li:nth-child(2) {
+				right: 140px;
+				top: 250px;
+			}
+			#shizhong ul:nth-child(2) li:nth-child(3) {
+				right: 100px;
+				top: 400px;
+			}
+			#shizhong ul:nth-child(2) li:nth-child(4) {
+				right: 140px;
+				bottom: 250px;
+			}
+			#shizhong ul:nth-child(2) li:nth-child(5) {
+				right: 250px;
+				bottom: 140px;
+			}
+			#shizhong ul:nth-child(2) li:nth-child(6) {
+				right: 400px;
+				bottom: 100px;
+			}
+			#shizhong ul:nth-child(2) li:nth-child(7) {
+				left: 250px;
+				bottom: 140px;
+			}
+			#shizhong ul:nth-child(2) li:nth-child(8) {
+				left: 140px;
+				bottom: 250px;
+			}
+			#shizhong ul:nth-child(2) li:nth-child(9) {
+				left: 100px;
+				bottom: 400px;
+			}
+			#shizhong ul:nth-child(2) li:nth-child(10) {
+				left: 140px;
+				top: 250px;
+			}
+			#shizhong ul:nth-child(2) li:nth-child(11) {
+				left: 250px;
+				top: 140px;
+			}
+			#shizhong ul:nth-child(2) li:nth-child(12) {
+				left: 400px;
+				top: 100px;
+			}
+			
+			
+			#shizhong ul:nth-child(3) li {
+				list-style: none;
+				width: 16px;
+				height: 800px;
+				overflow: hidden;
+				/*border: 1px solid black;*/
+				margin-left: -8px;
+				position: absolute;
+				top: 0;
+				left: 50%;
+			}
+			#shizhong ul:nth-child(3) li:nth-child(1) b {
+				display: block;
+				width: 16px;
+				height: 260px;
+				overflow: hidden;
+				background: black;
+				margin-top: 190px;
+			}
+			#shizhong ul:nth-child(3) li:nth-child(2) b {
+				display: block;
+				width: 12px;
+				height: 320px;
+				overflow: hidden;
+				background: black;
+				margin: 0px auto;
+				margin-top: 150px;
+			}
+			#shizhong ul:nth-child(3) li:nth-child(3) b:nth-child(1) {
+				display: block;
+				width: 6px;
+				height: 450px;
+				overflow: hidden;
+				background: red;
+				margin: 0px auto;
+				margin-top: 50px;
+			}
+			#shizhong ul:nth-child(3) li:nth-child(3) b:nth-child(2) {
+				display: block;
+				width: 30px;
+				height: 30px;
+				overflow: hidden;
+				background: red;
+				border-radius: 50%;
+				margin: -15px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+			}
+			
+			#shizhong ul:nth-child(3) li:nth-child(1) {
+				/*animation: run 21600s linear infinite;*/
+			}
+			#shizhong ul:nth-child(3) li:nth-child(2) {
+				/*animation: run 3600s linear infinite;*/
+			}
+			#shizhong ul:nth-child(3) li:nth-child(3) {
+				overflow: visible;
+				/*animation: run 60s linear infinite;*/
+			}
+			
+			/*@keyframes run{
+				0%{
+					transform: rotate(0deg);
+				}
+				100%{
+					transform: rotate(360deg);
+				}
+			}*/
+			
+		</style>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			
+			window.onload = function(){
+				
+				var shijian = new Date();
+				var shi = shijian.getHours();
+				var fen = shijian.getMinutes();
+				var miao = shijian.getSeconds();
+				
+//				document.write(shi+':'+fen+':'+miao);
+				
+				var shizhen = document.getElementById('shizhen');
+				var fenzhen = document.getElementById('fenzhen');
+				var miaozhen = document.getElementById('miaozhen');
+				
+				shizhen.style.cssText = "transform: rotate("+(shi*30)+"deg);";
+				fenzhen.style.cssText = "transform: rotate("+(fen*6)+"deg);";
+				miaozhen.style.cssText = "transform: rotate("+(miao*6)+"deg);";
+				
+				setInterval(function(){
+					miao++;
+					if(miao==60){
+						miao = 0;
+						fen = fen + 1;
+						if(fen==60){
+							fen = 0;
+							shi = shi + 1;
+							if(shi==12){
+								shi = 0;
+							}
+						}
+					}
+					shizhen.style.cssText = "transform: rotate("+(shi*30)+"deg);";
+					fenzhen.style.cssText = "transform: rotate("+(fen*6)+"deg);";
+					miaozhen.style.cssText = "transform: rotate("+(miao*6)+"deg);";
+				},1000);
+				
+			}
+			
+		</script>
+		
+		<div id="shizhong">
+			<ul>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+				<li><b></b><b></b></li>
+			</ul>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+				<li>10</li>
+				<li>11</li>
+				<li>12</li>		
+			</ul>
+			<ul>
+				<li id="shizhen"><b></b></li>
+				<li id="fenzhen"><b></b></li>
+				<li id="miaozhen"><b></b><b></b></li>
+			</ul>
+		</div>
+		
+	</body>
+</html>

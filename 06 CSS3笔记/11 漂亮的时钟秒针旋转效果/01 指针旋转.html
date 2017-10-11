@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style type="text/css">
+			
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			#zhizhen {
+				width: 300px;
+				height: 12px;
+				/*background: black;*/
+				margin: 0px auto;
+				margin-top: 260px;
+				
+				animation: run 3s linear infinite;
+				/*设置旋转基准点*/
+				transform-origin: 55px 50%;
+			}
+			
+			@keyframes run{
+				from{
+					transform: rotate(0deg);
+				}
+				to{
+					transform: rotate(360deg);
+				}
+			}
+			
+			#zhizhen div:nth-child(1) {
+				width: 300px;
+				height: 12px;
+				background: dodgerblue;
+			}
+			#zhizhen div:nth-child(2) {
+				width: 30px;
+				height: 30px;
+				background: dodgerblue;
+				border-radius: 50%;
+				margin-left: 40px;
+				margin-top: -21px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div id="zhizhen">
+			<div></div>
+			<div></div>
+		</div>
+		
+	</body>
+</html>

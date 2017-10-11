@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>28 jquery对元素尺寸的操作</title>
+	
+	<script src="jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
+	<script src="jquery/jquery.easing.min.js" type="text/javascript"></script>
+    
+   	<style type="text/css">
+   		* {
+   			padding: 0;
+   			margin: 0;
+   		}
+   		#news {
+   			width: 500px;
+   			border: 5px solid palevioletred;
+   			margin: 0px auto;
+   			padding: 30px;
+   		}
+    </style>
+</head>
+<body>		
+	
+	
+	<script type="text/javascript">
+		$(function(){
+//			获得内容的高度
+//			var re = $("#news").height();
+//			alert(re);
+
+//			设置内容高度
+//			$("#news").height(1000);
+
+//			获得的是内边距+内容的高度
+//			var re = $("#news").innerHeight();
+//			alert(re);
+			
+//			获得的是总高度(内容+内边距+边框)
+			var re = $("#news").outerHeight();
+			alert(re);
+		})
+  	</script>
+	<div id="news">
+		中新网2月28日电  据日媒报道，日本2017年度预算案在在野党仍在追究学校法人“森友学园”低价收购国有地的情况下，由执政党多数赞成在众院获得了通过，年度内成立已成定局。
+　　但围绕森友学园，陆续出现了建设工地垃圾被回填等问题。日本首相安倍晋三否认自身及夫人昭惠参与其中但加强警惕。攻防的舞台如今转移到了参院。
+		“虽然外界想给我扣这个帽子，但真的什么都没有。”安倍在27日的众院预算委员会会议上强烈主张森友学园与其无关。在野党议员要求“如果没有做亏心事，应该设立由第三方加入的调查委员会”，但安倍拒绝称“会计检查院会调查”。
+　　有关安倍及夫人与学园的关系，安倍甚至以“辞去议员的心理准备”担保来强烈否定，国有土地低价购买问题则让财务省局长等代为答辩。安倍打算在参院审议中也以这种答辩战略来浇灭质疑之火。
+　　但以“安倍晋三纪念小学”开设名目来募集捐款等问题还是让外界把眼光投向了安倍与学园的关系。学园正在建设中的小学用地将挖出垃圾回填这一施工方证言若得到证实，政府主张“这是恰当程序”的正当性或发生动摇。
+　　日本首相官邸相关人士透露不安称“若首相卷入学园问题，阵脚将大乱”。自民党内部也有意见认为“若连日被质问，好端端的首相也会形象大损吧”(一名骨干人士语)。
+　　另一方面，日本在野党打算在参院审议中也深挖学园问题。民进党议员在当天的众院预算委员会会议上指出，该学园运营的幼儿园运动会上让儿童用“安保法在国会通过太好了”、“安倍首相加油”进行运动员宣誓。
+　　报道指出，虽然如此，突如其来的攻击材料是否能对政权造成打击也是难以保证。虽然想彻底揭露安倍与学园的关联性，但缺乏致命一击，众院还是让预算案迅速通过。
+　　28日起的日本参院预算委员会审议进行电视直播。民进党前代理党首长妻昭在该党代议士会议上宣布：“疑惑尚未消除。在参院也将彻底追究。”
+	</div>
+</body>
+</html>

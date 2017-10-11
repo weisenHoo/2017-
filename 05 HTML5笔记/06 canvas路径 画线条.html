@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>06 canvas路径 画线条</title>
+		
+		<style type="text/css">
+
+			canvas {
+				background: #272822;
+			}
+	
+		</style>
+	</head>
+	<body>
+		
+		<!--<canvas id="canvas" width="900" height="500"></canvas>
+		<script type="text/javascript">
+//			获得画板
+			var canvas = document.getElementById('canvas');
+//			获得绘画环境
+			var cv = canvas.getContext('2d');
+			
+//			开始路径(相当于大喊一声,我要开始画啦)
+			cv.beginPath();
+//			移动笔触到开始位置
+			cv.moveTo(100,100);
+//			指定要画到哪里去
+			cv.lineTo(600,300);
+			
+//			定义拐角类型
+			cv.lineJoin = 'round';
+//			定义线条颜色
+			cv.strokeStyle = 'white';
+//			定义线条粗细
+			cv.lineWidth = 10;
+//			把线条画出来
+			cv.stroke();
+			
+			cv.lineTo(700,150);
+			cv.stroke();
+			
+			cv.lineTo(780,400);
+			cv.stroke();
+		</script>-->
+		
+		<!--画三角形-->
+		<!--<canvas id="canvas" width="900" height="500"></canvas>
+		<script type="text/javascript">
+//			获得画板
+			var canvas = document.getElementById('canvas');
+//			获得绘画环境
+			var cv = canvas.getContext('2d');
+			
+//			开始路径
+			cv.beginPath();
+//			笔触定义到开始位置
+			cv.moveTo(200,50);
+//			定义这条线画到哪里结束
+			cv.lineTo(200,450);
+			
+//			定义笔触颜色
+			cv.strokeStyle = 'yellow';
+//			定义粗细
+			cv.lineWidth = 10;
+//			划线
+			cv.stroke();
+			
+			cv.lineTo(500,450);
+			cv.stroke();
+			
+//			cv.lineTo(200,50);
+//			cv.stroke();
+			
+//			关闭路径(将形状闭合,其实就是将最终笔触的位置和开始点连接起来,形成一个闭合图形)
+			cv.closePath();
+			cv.stroke();
+		</script>-->
+		
+		<!--绘制实心多边形-->
+		<canvas id="canvas" width="900" height="500"></canvas>
+		<script type="text/javascript">
+//			获得画板
+			var canvas = document.getElementById('canvas');
+//			获得绘画环境
+			var cv = canvas.getContext('2d');
+			
+//			开始路径
+			cv.beginPath();
+//			笔触定义到开始位置
+			cv.moveTo(200,50);
+//			定义这条线画到哪里结束
+			cv.lineTo(200,450);			
+			cv.lineTo(500,450);
+			cv.stroke();
+//			闭合路径
+			cv.closePath();
+			
+//			指定填充颜色
+			cv.fillStyle = 'yellow';
+//			填充路径
+			cv.fill();
+			
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>47 冰河的世纪中效果</title>
+    
+  	<script type="text/javascript">
+//		作业
+//		1.做一个图片的动态效果
+		window.onload = function(){
+			
+			var btn = document.getElementById('btn');
+			var pic = document.getElementById('pic');
+			var timer;
+			
+			var p = 0;
+			
+//			给按钮加单击事件
+			btn.onclick = function(){
+				
+				clearInterval(timer);
+				timer = setInterval(function(){
+					
+					var num = Math.abs(p);
+//					换下一张图片
+					pic.setAttribute('src','bhsj/'+num+'.jpg');
+					console.log(num);
+					p++;
+					if(p==18 || p==0){
+						p = p*-1;
+					}
+										
+				},100);
+				
+			}
+			
+		}
+  		
+  	</script>
+  	
+  	<!--<script type="text/javascript">
+
+//		2.用同一个按钮操作抽奖
+		window.onload = function(){
+			
+			var btn = document.getElementById('btn');
+			var pic = document.getElementById('pic');
+			var timer;
+			
+//			用来存储图片路径的数组
+  			var arr = ['images/0.jpg','images/1.jpg','images/2.jpg','images/3.jpg','images/4.jpg','images/5.jpg','images/6.jpg','images/7.jpg','images/8.jpg','images/9.jpg','images/10.jpg','images/11.jpg'];
+  			
+  			var i = 0;
+			
+//			给按钮加单击事件
+			btn.onclick = function(){
+				
+				clearInterval(timer);
+				timer = setInterval(function(){
+					
+//					抽取随机下标
+  					var num = Math.floor(Math.random()*(arr.length-1+1-0)+0);
+//					将num号路径设置给图片
+  					pic.setAttribute('src',arr[num]);
+  					console.log(num);
+
+				},100);
+				
+				if(i==0){	
+					btn.setAttribute('value','停止抽奖');
+  					i = 1;
+				}else if(i==1){
+					clearInterval(timer);
+					btn.setAttribute('value','开始抽奖');
+//					生成一个随机数
+					var num = Math.random()*10;
+					if(num<9){
+						pic.setAttribute('src','images/0.jpg');
+					}
+					i = 0;
+				}
+				
+			}
+			
+		}
+  		
+  	</script>-->
+	
+</head>
+<body>
+	
+	<input type="button" name="btn" id="btn" value="开始抽奖" />
+	<br /><br />
+	<!--<img src="images/0.jpg" id="pic"/>-->
+	<img src="bhsj/0.jpg" id="pic"/>
+	
+</body>
+</html>

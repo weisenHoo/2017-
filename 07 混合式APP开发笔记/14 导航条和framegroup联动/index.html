@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>	
+    <link rel="stylesheet" href="css/index.css">
+    <script src="script/api.js"></script>
+</head>
+<body>
+    
+<!-- 顶部 -->
+<div id="top">
+	網易
+</div>
+<!-- 顶部结束 -->
+
+<script>
+	
+	apiready = function(){
+
+		// 导航条
+		var NVNavigationBar = api.require('NVNavigationBar');
+		NVNavigationBar.open({
+		    rect: {
+		         x: 0,
+		         y: 50,
+		         w: api.frameWidth,
+		         h: 30
+		    },
+		   styles: {
+		         orientation: 'horizontal',
+		         bg: '#fafafa',
+		         bgAlpha: 1,
+		         font: {
+		         size: 14,
+		         sizeSelected: 18,
+		         color: '#ababab',
+		         colorSelected: '#eb413d',
+		         alpha: 1
+		         },
+		         itemSize: {
+		             w: 60,
+		             h: 44
+		         }
+		   },
+		    items: [{
+		       title: '头条',
+		       },{
+		       title: '娱乐',
+		       },{
+		       title: '热点',
+		       },{
+		       title: '体育',
+		       },{
+		       title: '北京',
+		       },{
+		       title: '财经',
+		       },{
+		       title: '科技',
+		       },{
+		       title: '段子',
+		       },{
+		       title: '图片',
+		       },{
+		       title: '汽车',
+		       }],
+		       selectedIndex: 0,//app打开后默认选中的导航项目的序号
+		       fixedOn: api.frameName,
+		       id: 'first'
+		}, function(ret, err) {
+		    // api.alert({msg:JSON.stringify(ret)});
+		    // alert('点击导航条了！')；
+		    // alert(ret.index);
+
+		    // 将frame组中的对应的frame切换过去
+		    api.setFrameGroupIndex({
+			    name: 'group1',
+			    index: ret.index,
+			    scroll: true
+			});
+		});
+		// 导航条结束
+
+
+		// frame组
+		api.openFrameGroup({
+		    name: 'group1',
+		    rect: {
+		        x: 0,
+		        y: 80,
+		        w: 'auto',
+		        h: 'auto'
+		    },
+		    frames: [{
+		        name: 'toutiao',
+		        url: 'html/toutiao.html',
+		        bgColor: '#fff'
+		    }, {
+		        name: 'yule',
+		        url: 'html/yule.html',
+		        bgColor: '#fff'
+		    }
+		    , {
+		        name: 'redian',
+		        url: 'html/redian.html',
+		        bgColor: '#fff'
+		    }
+		    , {
+		        name: 'tiyu',
+		        url: 'html/tiyu.html',
+		        bgColor: '#fff'
+		    }
+		    , {
+		        name: 'beijing',
+		        url: 'html/beijing.html',
+		        bgColor: '#fff'
+		    }
+		    , {
+		        name: 'caijing',
+		        url: 'html/caijing.html',
+		        bgColor: '#fff'
+		    }
+		    , {
+		        name: 'keji',
+		        url: 'html/keji.html',
+		        bgColor: '#fff'
+		    }
+		    , {
+		        name: 'duanzi',
+		        url: 'html/duanzi.html',
+		        bgColor: '#fff'
+		    }
+		    , {
+		        name: 'tupian',
+		        url: 'html/tupian.html',
+		        bgColor: '#fff'
+		    }
+		    , {
+		        name: 'qiche',
+		        url: 'html/qiche.html',
+		        bgColor: '#fff'
+		    }]
+		}, function(ret, err) {
+		    var index = ret.index;
+		    // 改变导航条被选中的项目
+		    NVNavigationBar.setSelected({
+			    id: 'first',
+			    index: ret.index,
+			    selected: true
+			});
+		});
+		// frame组结束
+
+
+	}
+
+</script>
+
+</body>
+</html>

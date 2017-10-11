@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>61 this用法</title>
+    
+    <!--<style type="text/css">
+    	
+    	#hd{
+    		width: 500px;
+    		height: 300px;
+    		background: dodgerblue;
+    	}
+    	
+    </style>-->
+    
+    <!--<script type="text/javascript">
+    	
+		window.onload = function(){
+			
+			var hd = document.getElementById('hd');
+//			this在事件中指向的是时间源对象
+			hd.onclick = function(){
+//				hd.style.background = 'orange';
+				this.style.background = 'orange';
+			}
+			
+		}
+    	
+    </script>-->
+	
+	<style type="text/css">
+		
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		img{
+			float: left;
+			width: 200px;
+			height: 200px;
+			margin: 5px;
+		}
+		
+	</style>
+	
+	<script type="text/javascript">
+		
+		window.onload = function(){
+			
+//			抓到所有图片
+			var imgs = document.getElementsByTagName('img')
+//			循环所有的图片,给每张图片都加单击事件
+			for(var i=0;i<imgs.length;i++){
+				
+//				给号图片加单击事件
+				imgs[i].onclick = function(){
+				
+					this.style.visibility = 'hidden';
+					
+				}
+				
+			}
+			
+			
+		}
+		
+	</script>
+	
+</head>
+<body>
+	
+	<!--<div id="hd"></div>-->
+	
+	<!--img[src=images/$$.jpg]*12-->
+	<img src="images/0.jpg" alt="" />
+	<img src="images/1.jpg" alt="" />
+	<img src="images/2.jpg" alt="" />
+	<img src="images/3.jpg" alt="" />
+	<img src="images/4.jpg" alt="" />
+	<img src="images/5.jpg" alt="" />
+	<img src="images/6.jpg" alt="" />
+	<img src="images/7.jpg" alt="" />
+	<img src="images/8.jpg" alt="" />
+	<img src="images/9.jpg" alt="" />
+	<img src="images/10.jpg" alt="" />
+	<img src="images/11.jpg" alt="" />	
+	
+</body>
+</html>

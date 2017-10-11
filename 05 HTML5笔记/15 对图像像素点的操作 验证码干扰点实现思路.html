@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>15 对图像像素点的操作 验证码干扰点实现思路</title>
+		
+		<style type="text/css">
+			canvas {
+				/*background: #272822;*/
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+
+		<!--<canvas id="canvas" width="800" height="500"></canvas>-->
+		<!--<script type="text/javascript">
+//			抓到画板
+			var canvas = document.getElementById('canvas');
+//			获得绘画环境
+			var cv = canvas.getContext('2d');
+		
+			cv.fillStyle = '#272822';
+			cv.fillRect(0,0,800,500);
+//			获得图像的所有的像素的信息
+			var alldata = cv.getImageData(0,0,800,500);//alldata.data [r,g,b,a,r,g,b,a]
+//			循环,将获得的数据的每个值都随机
+			for(var i=0;i<alldata.data.length;i++){
+//				随机0-255之间的随机整数
+				var num = Math.floor(Math.random()*256);
+				alldata.data[i] = num;
+			}
+			
+//			将处理后的数据存回画板
+			cv.putImageData(alldata,0,0);
+
+			
+
+			
+		</script>-->
+		
+		<!--验证码-->
+		<canvas id="canvas" width="800" height="300"></canvas>
+		<script type="text/javascript">
+//			抓到画板
+			var canvas = document.getElementById('canvas');
+//			获得绘画环境
+			var cv = canvas.getContext('2d');
+			
+			cv.fillStyle = '#272822';
+			cv.fillRect(0,0,800,500);
+			
+			cv.font = '100px 微软雅黑';
+			cv.fillStyle = 'greenyellow';
+			cv.fillText('后盾人',200,200);
+		
+//			获得所有的图像像素点信息
+			var alldata = cv.getImageData(0,0,800,500);
+//			获得像素点的个数
+			var dian = alldata.data.length/4;
+			for(var i=0;i<5000;i++){
+//				取随机数
+				var num = Math.floor(Math.random()*dian);//Math.floor(Math.random()*(y+1-x)+x);
+//				计算像素点对应的四条信息从几号开始
+				var start = (num-1)*4;
+//				取随机数
+				alldata.data[start] = Math.floor(Math.random()*256);
+				alldata.data[start+1] = Math.floor(Math.random()*256);
+				alldata.data[start+2] = Math.floor(Math.random()*256);
+			}
+			
+//			将数据写回画板
+			cv.putImageData(alldata,0,0);
+
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>15 新闻标题无缝循环展示效果</title>
+	
+	<script src="jquery/jquery-1.11.3.min.js"></script>
+	
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		#hd {
+			width: 500px;
+			height: 40px;
+			margin: 200px auto;
+			border: 2px solid gainsboro;
+			position: relative;
+			overflow: hidden;
+		}
+		#hd ul {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		#hd ul li {
+			width: 500px;
+			height: 40px;
+			list-style: none;
+			line-height: 40px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		$(function(){
+//			大总管变量
+			var c = 0;			
+//			设置定时器,让ul每个1秒钟活动一次
+			setInterval(function(){
+				c++;
+//				c = (c==$("#hd ul li").length)?0:c;
+				if(c==5){
+					$("#hd ul").css({'top':'0px'});
+					c = 1;
+				}
+//				计算ul应该到达的top值
+				var t = c*-40;
+	//			让ul滑动上去
+				$("#hd ul").animate({'top':t+'px'},500);
+			},1000);
+		})
+	</script>
+	<div id="hd">
+		<ul>
+			<li style="background: greenyellow;">10 fadeTo animate方法 天猫图片滑动效果</li>
+			<li style="background: orange;">11 顶部下滑大图效果</li>
+			<li style="background: blueviolet;">13 麦包包鼠标点击效果实现</li>
+			<li style="background: peachpuff;">15 新闻标题无缝循环展示效果</li>
+			<li style="background: greenyellow;">10 fadeTo animate方法 天猫图片滑动效果</li>
+		</ul>
+	</div>
+</body>
+</html>

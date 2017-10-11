@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>48 获得实际作用在元素身上的样式</title>
+    
+    <style type="text/css">
+    	
+    	#hd {
+    		width: 500px;
+    		height: 200px;
+    		background: plum;
+    		margin-top: 123px;
+    	}
+    	
+    </style>
+    
+  	<script type="text/javascript">
+  		
+  		window.onload = function(){
+	  		var hd = document.getElementById('hd');
+//	  		alert(hd).style.width;	
+
+//			获得实际作用在元素身上的样式
+			if(document.all){//低版本的IE
+//				var w = hd.currentStyle.width;
+//				var w = hd.currentStyle.marginTop;
+				var w = hd.currentStyle.backgroundColor;
+				
+			}else{
+//				var w = getComputedStyle(hd,null).width;
+//				var w = getComputedStyle(hd,null).marginTop;
+				var w = getComputedStyle(hd,null).backgroundColor;
+				
+			}
+			
+			alert(w);
+  		}
+  		
+  		
+  	</script>
+	
+</head>
+<body>
+	
+	<div id="hd"></div>
+	
+</body>
+</html>

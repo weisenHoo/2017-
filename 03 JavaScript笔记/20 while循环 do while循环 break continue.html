@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>20 while循环 do while循环 break continue</title>
+
+    <script type="text/javascript">
+    
+//  	for循环一般用在有明确循环次数的情况下
+//		while循环一般用在没有明确循环次数的情况下
+    
+    	var i = 0;
+    	
+    	while(i<20){    		
+    		document.write(i);
+    		document.write("<br />");
+    		i++;
+    	}
+    	
+//  	do while循环是不管三七二十一先执行一次,然后判断条件
+//		while循环先判断,后执行
+		
+		var age = 18;
+		
+		do{
+			document.write(age+"岁领钱! <br />");
+			age++;
+		}while(age<=60);
+		
+		document.write("<br />")
+		
+		var age = 18;
+		
+		while(age<=60){
+			if(age==25){
+				break;//结束整个循环
+//				age++;
+//				continue;//跳出本次循环，直接进入下次循环判断
+			}
+			document.write(age+"岁领钱! <br />");
+			age++;
+		}
+		
+	
+    </script>
+
+</head>
+<body>
+
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>15 自定义运算效果</title>
+
+    <script type="text/javascript">
+
+        var num1 = prompt('请输入第一个数字')*1,
+            charset = prompt('请输入运算符，例如+-*/'),
+            num2 = prompt('请输入第二个数字')*1;
+
+        switch(charset){
+            case '+':
+                var re = num1 + num2;
+                break;
+            case '-':
+                var re = num1 - num2;
+                break;
+            case '*':
+                var re = num1 * num2;
+                break;
+            case '/':
+                var re = num1 / num2;
+                break;
+            default:
+                var re = '输入错误';
+        }
+
+        document.write(re);
+
+    </script>
+
+</head>
+<body>
+
+
+
+
+</body>
+</html>

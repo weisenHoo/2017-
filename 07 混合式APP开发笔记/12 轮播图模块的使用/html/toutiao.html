@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>头条</title>
+	<script src="../script/api.js"></script>
+</head>
+<body>
+
+<script>
+
+	apiready = function(){
+
+		// 轮播图
+		var UIScrollPicture = api.require('UIScrollPicture');
+		UIScrollPicture.open({
+		    rect: {
+		        x: 0,
+		        y: 0,
+		        w: api.winWidth,
+		        h: api.winHeight / 3
+		    },
+		    data: {
+		        paths: [
+		            'https://imgsa.baidu.com/news/q%3D100/sign=36114b21efdde711e1d247f697efcef4/94cad1c8a786c9179c4da91dc33d70cf3bc7574c.jpg',
+		            'https://imgsa.baidu.com/news/q%3D100/sign=6639f516798da977482f822b8050f872/b3fb43166d224f4a0c0d453603f790529822d17a.jpg',
+		            'https://imgsa.baidu.com/news/q%3D100/sign=695bcad2adefce1bec2bccca9f50f3e8/7e3e6709c93d70cfc2732329f2dcd100baa12b0d.jpg',
+		            'https://imgsa.baidu.com/news/q%3D100/sign=512e780fba51f819f725074aeab44a76/21a4462309f79052f01eb91a06f3d7ca7bcbd595.jpg'
+		        ],
+		        captions: ['习近平主持召开政治局会议', '27省份公布首季GDP 东北经济现回暖迹象', '小米自研芯片发布2个月，为何雷军已闭口不谈?', '山东莱州再探出世界级金矿 备案金金属量382吨']
+		    },
+		    styles: {
+		        caption: {
+		            height: 30,
+		            color: '#333',
+		            size: 12,
+		            bgColor: '#f6f6f6',
+		            position: 'bottom'
+		        },
+		        indicator: {
+		            align: 'center',
+		            color: '#FFFFFF',
+		            activeColor: '#DA70D6'
+		        }
+		    },
+		    placeholderImg: 'widget://res/loading_more.gif',//图片加载过程中显示的图片
+		    contentMode: 'scaleToFill',
+		    interval: 3,
+		    fixedOn: api.frameName,
+		    loop: true,
+		    fixed: false
+		}, function(ret, err) {
+		    // if (ret) {
+		    //     alert(JSON.stringify(ret));
+		    // } else {
+		    //     alert(JSON.stringify(err));
+		    // }
+		});
+		// 轮播图结束
+
+	}
+
+</script>
+
+</body>
+</html>

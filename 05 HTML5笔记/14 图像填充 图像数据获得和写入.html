@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>14 图像填充 图像数据获得和写入</title>
+		
+		<style type="text/css">
+			canvas {
+				background: #272822;
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+
+		<canvas id="canvas" width="800" height="800"></canvas>
+		<script type="text/javascript">
+//			抓到画板
+			var canvas = document.getElementById('canvas');
+//			获得绘画环境
+			var cv = canvas.getContext('2d');
+			
+//			创建图片资源
+			var newimg = new Image();
+			newimg.src = 'gundan.jpg';
+			
+//			var guize = cv.createPattern(newimg,'repeat');
+//			画一个矩形区域
+//			cv.rect(10,10,700,450);
+//			cv.fillStyle = guize;
+//			cv.fill();
+
+
+			newimg.onload = function(){
+//				将图片画入画板
+				cv.drawImage(newimg,10,10)
+				
+//				获得指定区域内所有像素点的信息
+				var alldata = cv.getImageData(20,20,200,100);
+//				alldata.data
+			
+//				将图像信息写入画板
+				cv.putImageData(alldata,550,480);
+			}
+			
+		</script>
+		
+	</body>
+</html>

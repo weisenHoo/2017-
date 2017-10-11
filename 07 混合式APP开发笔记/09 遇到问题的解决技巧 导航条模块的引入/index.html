@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>	
+    <link rel="stylesheet" href="css/index.css">
+    <script src="script/api.js"></script>
+</head>
+<body>
+    
+<!-- 顶部 -->
+<div id="top">
+	網易
+</div>
+<!-- 顶部结束 -->
+
+<!-- 导航条 -->
+<script>
+
+	apiready = function(){
+		var NVNavigationBar = api.require('NVNavigationBar');
+		NVNavigationBar.open({
+		    rect: {
+		         x: 0,
+		         y: 50,
+		         w: api.frameWidth,
+		         h: 42
+		    },
+		   styles: {
+		         orientation: 'horizontal',
+		         bg: '#6b6b6b',
+		         bgAlpha: 1,
+		         font: {
+		         size: 14,
+		         sizeSelected: 18,
+		         color: '#FFFFFF',
+		         colorSelected: '#ff0000',
+		         alpha: 1
+		         },
+		         itemSize: {
+		             w: 90,
+		             h: 44
+		         }
+		   },
+		    items: [{
+		       title: '标题一',
+		       bg: '#FFE7BA',
+		       bgSelected: '#ff00000'
+		       },{
+		       title: '标题二',
+		       bg: '#FFE1FF',
+		       bgSelected: '#FFA500'
+		       },{
+		       title: '标题三',
+		       bg: '#FFAEB9',
+		       bgSelected: '#FFA500'
+		       },{
+		       title: '标题四',
+		       bg: '#CDCD00',
+		       bgSelected: '#FFA500'
+		       },{
+		       title: '标题五',
+		       bg: '#BBFFFF',
+		       bgSelected: '#FFA500'
+		       },{
+		       title: '标题六',
+		       bg: '#436EEE',
+		       bgSelected: '#FFA500'
+		       }],
+		       selectedIndex: 1,
+		       fixedOn: api.frameName,
+		       id: 'first'
+		}, function(ret, err) {
+		    api.alert({msg:JSON.stringify(ret)});
+		});
+	}
+
+</script>
+<!-- 导航条结束 -->
+
+</body>
+</html>

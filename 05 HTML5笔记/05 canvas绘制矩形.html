@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>05 canvas绘制矩形</title>
+		
+		<style type="text/css">
+			canvas {
+				background: #222;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<canvas id="canvas" width="800" height="500"></canvas>
+		<script type="text/javascript">
+//			获得画板
+			var canvas = document.getElementById("canvas");
+//			获得绘画环境
+			var cv = canvas.getContext('2d');
+			
+//			指定填充颜色
+//			cv.fillStyle = '#E6DB74';
+//			绘制一个填充矩形
+//			cv.fillRect(200,100,260,199);
+			
+//			指定线条粗细
+//			cv.lineWidth = '10';
+//			指定线条颜色
+//			cv.strokeStyle = '#E6DB74';
+//			绘制空心矩形
+//			cv.strokeRect(200,100,260,199);
+
+			cv.fillStyle = '#222';
+			cv.fillRect(0,0,800,500);
+
+//			清除
+//			指定填充颜色
+			cv.fillStyle = '#E6DB74';
+//			绘制一个填充矩形
+			cv.fillRect(200,100,260,199);
+			cv.clearRect(300,200,100,50);
+		</script>
+		
+	</body>
+</html>

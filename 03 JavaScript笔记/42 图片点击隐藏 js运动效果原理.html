@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>42 图片点击隐藏 js运动效果原理</title>
+    
+    <style type="text/css">
+    	
+    	body {
+    		position: relative;
+    	}
+		#dan {
+			position: absolute;
+			top: 50px;
+		}
+    	
+    </style>
+    
+    <script type="text/javascript">
+
+//		window.onload = function(){
+//			
+//			var btn = document.getElementById("btn");
+//			var img = document.getElementById("img");
+//			
+////			给按钮家单击事件
+//			btn.onclick = function(){
+////				让图片隐藏
+//				img.style.display = "none";
+//				alert(img.style.display);
+//			}
+//			
+//		}
+
+		
+//		运动原理
+
+		window.onload = function(){
+			
+//			抓元素
+			var btn = document.getElementById("btn");
+			var dan = document.getElementById("dan");
+			
+			btn.onclick = function(){
+				
+//				设置定时器,每隔一秒钟,将left值变大10个像素
+				var timer = setInterval(function(){
+//					获得当前图片的left值
+					var old_left = dan.style.left;
+//					计算新的left值
+					var new_left = parseInt(old_left)+5;
+//					将新的值赋值回去
+					dan.style.left = new_left+"px";
+//					判断是否该停止了
+					if(new_left == 600){
+//						清理定时器,让运动停止
+						clearInterval(timer);
+					}
+					
+				},100);
+				
+			}			
+						
+		}
+		
+  </script>
+  
+  <script type="text/javascript">
+
+//		作业
+//		1.点击按钮自动切换图片的显隐状态
+//		window.onload = function(){
+//			
+//			var btn = document.getElementById("btn");
+//			var img = document.getElementById("img");
+//			
+////			给按钮家单击事件
+//			btn.onclick = function(){
+////				让图片隐藏
+//				var dp = img.style.display;
+//				if(dp == "none"){
+//					img.style.display = "block";
+//				}else if(dp == "block"){
+//					img.style.display = "none"
+//				}
+//			}
+//			
+//		}
+
+
+//		2.点击按钮,让图片来回跑
+
+//		3.点击按钮,让图片加速跑
+		
+  </script>
+	
+</head>
+<body>
+	
+	<input type="button" name="" id="btn" value="点我啊！！！" />
+	
+	<br />
+
+	<!--<img src="01.jpg" alt="" id="img" style="display: block;"/>-->
+	<!--<div id="hd" style="width: 300px; height: 260px;"></div>-->
+	<img src="dan.gif" alt="" id="dan" style="left: 0px;"/>
+
+</body>
+</html>

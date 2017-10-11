@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>11 canvas文字操作</title>
+		
+		<style type="text/css">
+			canvas {
+				background: #272822;
+			}
+		</style>
+	</head>
+	<body>
+
+		<canvas id="canvas" width="900" height="600"></canvas>
+		<script type="text/javascript">
+//			抓到画板
+			var canvas = document.getElementById('canvas');
+//			获得绘画环境
+			var cv = canvas.getContext('2d');
+			
+//			画参考线
+//			开始路径
+			cv.beginPath();
+			cv.moveTo(0,200);
+			cv.lineTo(900,200);
+			cv.strokeStyle = 'white';
+			cv.lineWidth = 2;
+			cv.stroke();
+			
+			cv.beginPath();
+			cv.moveTo(300,0);
+			cv.lineTo(300,600);
+			cv.strokeStyle = 'white';
+			cv.lineWidth = 2;
+			cv.stroke();
+			
+//			设置文字属性
+			cv.font = '35px 微软雅黑';
+			
+//			设置填充颜色
+			cv.fillStyle = 'yellow';
+			
+//			水平对齐方式
+			cv.textAlign = 'center';
+//			cv.textAlign = 'left';
+//			cv.textAlign = 'right';
+
+//			设置基线
+			cv.textBaseline = 'top';
+			
+//			将文字画入
+//			cv.fillText('后盾人 人人做后盾',300,200);
+
+//			获得文字宽度
+			var str = '后盾人 人人做后盾';
+			var re = cv.measureText(str).width;
+			alert(re);
+			cv.fillText(str,300,200);
+
+//			cv.strokeStyle = 'yellow';
+//			cv.strokeText('后盾人 人人做后盾',300,200);
+//			cv.strokeText('后盾人 人人做后盾',300,200,100);
+		</script>
+		
+	</body>
+</html>

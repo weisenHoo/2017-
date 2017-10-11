@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>41 获得和设置元素行内样式</title>
+    
+    <style type="text/css">
+    	
+    	#hd {
+    		
+    		
+    		background: purple;
+    		margin: 20px 0px;
+    	}
+    	
+    </style>
+    
+    <script type="text/javascript">
+
+//		window.onload = function(){
+////			给按钮加单击事件
+//			document.getElementById("btn").onclick = function(){
+////				获得行内样式定义的宽度
+////				注意,元素.style.css样式 这种写法只能获得元素的行内样式
+////				var w = document.getElementById("hd").style.width;
+////				alert(w);
+//
+////				设置css样式
+////				document.getElementById("hd").style.width = "500px";
+//
+////				margin-top
+////				font-size
+////				...style.fontSize
+//
+//			}
+//		}
+		
+   </script>
+   
+   <script type="text/javascript">
+   
+		window.onload = function(){
+//			点击让元素变大
+			var btn = document.getElementById("btn");
+			var hd = document.getElementById("hd");	
+
+//			给按钮加单击事件
+			btn.onclick = function(){
+				
+//				获得元素当前的像素
+				var oldWidth = hd.style.width;
+				var oldHeight = hd.style.height;
+
+//				计算新的宽度值
+				var newWidth = parseInt(oldWidth)+10;//用到内置顶层函数parseInt
+				var newHeight = parseInt(oldHeight)+10;
+				
+//				将新的宽度值赋值回元素
+				hd.style.width = newWidth + "px";
+				hd.style.height = newHeight + "px";
+			}
+		}
+
+   </script>
+	
+</head>
+<body>
+	
+	<input type="button" name="" id="btn" value="点我啊！" />
+	
+	<br />
+	<!--<div id="hd" style="width: 300px; height: 260px; background: green; margin: 0px auto;"></div>-->
+	<div id="hd" style="width: 300px; height: 300px;"></div>
+
+</body>
+</html>

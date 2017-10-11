@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>09 canvas画圆形 弧形 饼状图</title>
+		
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			canvas {
+				background: #272822;
+				position: relative;
+			}	
+		</style>
+	</head>
+	<body>
+
+		<!--<canvas id="canvas" width="900" height="500"></canvas>
+		<script type="text/javascript">
+//			抓到画板
+			var canvas = document.getElementById('canvas');
+//			获得绘画环境
+			var cv = canvas.getContext('2d');
+			
+//			设置一个圆形
+			cv.arc(450,250,100,0*Math.PI/180,60*Math.PI/180);
+			
+			cv.fillStyle = 'yellow';
+//			填充
+			cv.fill();
+
+//			cv.strokeStyle = 'blueviolet';
+//			cv.stroke();
+		</script>-->
+		
+		<!--扇形-->
+		<canvas id="canvas" width="900" height="500"></canvas>
+		<script type="text/javascript">
+//			抓到画板
+			var canvas = document.getElementById('canvas');
+//			获得绘画环境
+			var cv = canvas.getContext('2d');
+			
+//			开启路径
+			cv.beginPath();			
+//			定义笔触开始的地方
+			cv.moveTo(300,220);
+			cv.arc(300,220,200,0*Math.PI/180,60*Math.PI/180);
+			cv.fillStyle = 'yellow';
+//			填充
+			cv.fill();
+			
+//			开启路径
+			cv.beginPath();			
+//			定义笔触开始的地方
+			cv.moveTo(300,220);
+			cv.arc(300,220,200,60*Math.PI/180,200*Math.PI/180);
+			cv.fillStyle = 'blueviolet';
+//			填充
+			cv.fill();
+			
+//			开启路径
+			cv.beginPath();			
+//			定义笔触开始的地方
+			cv.moveTo(300,220);
+			cv.arc(300,220,200,200*Math.PI/180,360*Math.PI/180);
+			cv.fillStyle = 'palevioletred';
+//			填充
+			cv.fill();
+		</script>
+		
+	</body>
+</html>

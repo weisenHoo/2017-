@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>34 字符串替换 查找字符串位置</title>
+    
+    <script type="text/javascript">
+		
+//		作业
+//		1.将字符串中所有的后盾都替换成******
+//		var str = '后盾人php后盾人论坛后盾人网站后盾人学生';
+//	
+//		while(str.match('后盾')){
+//			str = str.replace('后盾','******');
+//		}
+//		
+//		document.write(str);
+
+    </script>
+    
+    <script type="text/javascript">
+
+//		2.查找字符串"后盾视频下载地址:bbs.houdunwang.com,论坛地址:bbs.houdunwang.com,官方地址:www.houdunwang.com"将所有"houdunwang"出现的位置,打印出来
+		var str = "后盾视频下载地址:bbs.houdunwang.com,论坛地址:bbs.houdunwang.com,官方地址:www.houdunwang.com";
+		
+		var re = [];
+		
+		while(str.match('houdunwang')){
+//			将第一次出现的位置压入数组中
+			re.push(str.indexOf('houdunwang'));
+//			将第一次出现的houdunwang替换成等长的其他字符
+			str = str.replace('houdunwang','**********');
+		}
+		
+		document.write(re);
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

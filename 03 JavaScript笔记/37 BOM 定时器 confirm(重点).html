@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>37 BOM 定时器 confirm</title>
+    
+    <script type="text/javascript">
+
+//		function hi(){
+//			alert('后盾人，大家好');
+//		}
+		
+//		每个两秒钟,就会执行一次hi函数
+//		鞭炮
+//		setInterval(hi,2000);
+//		setInterval(function(){
+//			alert('我也是定时器执行的');
+//		},3000);
+		
+//		定时炸弹
+//		页面打开后2秒钟,执行一次hi函数
+//		setTimeout(hi,2000);
+
+
+
+//		停止定时器
+//		var timer = setInterval(function(){
+//			alert('你好');
+//		},2000);
+//		
+//		setTimeout(function(){
+////			清理定时器
+//			clearInterval(timer);
+//		},5000);
+
+
+//		停止定时炸弹
+//		var timer = setTimeout(function(){
+//			alert('boom```````');
+//		},5000);
+//		
+//		setTimeout(function(){
+////			清理定时炸弹
+//			clearTimeout(timer);
+//			alert('报告长官！炸弹清除完毕');
+//		},3000);
+
+
+
+
+//		windoe对象
+//		alert('后盾人');
+//		window.alert('后盾人');
+
+//		confirm('你确定......？');
+		var re = confirm('你确定删除吗？');
+//		document.write(re);
+		if(re){
+			document.write("删除成功");
+		}else{
+			document.write("删除操作被取消");
+		}
+		
+		
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

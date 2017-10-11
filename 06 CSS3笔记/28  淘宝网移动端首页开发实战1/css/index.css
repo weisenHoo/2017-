@@ -1,0 +1,74 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+/*顶部搜索*/
+#top {
+	display: flex;
+	align-items: center;
+	
+	width: 100%;
+	overflow: hidden;
+	background: #fe5400;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+#top i.iconfont.icon-tao {
+	float: left;
+	margin-left: 3%;
+	
+	color: white;
+	font-size: 8vw;
+}
+#top .search {
+	display: block;
+	float: left;
+	width: 86%;
+	line-height: 2.5em;
+	margin-left: 1%;
+	background: #b52600;
+	border-radius: 5px;
+	text-decoration: none;
+	text-align: center;
+	color: #f0e0dc;
+	font-size: 3vw;
+}
+#top .search i.iconfont.icon-fangdajing {
+	margin-right: 1%;
+	font-size: 3vw;
+}
+/*顶部搜索结束*/
+
+/*图片轮播区域*/
+/*自带的基础css*/
+.swiper-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 0px auto;
+}
+.swiper-slide {
+    width: 100%;
+}
+.swiper-slide img {
+    width: 100%;
+}
+.swiper-pagination {
+    text-align: right;
+}
+.swiper-pagination-bullet {
+    background: #fff;
+}
+.swiper-pagination-bullet-active {
+    background: #ff5501;
+}
+/*自带的基础css 结束*/
+
+/*图片轮播区域结束*/
+
+img.flash {
+	width: 100%;
+}
+
+
+

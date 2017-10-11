@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>02 html5新增语义化标签详解</title>
+		
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			header {
+				width: 1000px;
+				height: 110px;				
+				margin: 0px auto;
+				background: blueviolet;
+				
+				line-height: 110px;
+				text-align: center;
+				color: white;
+			}
+			nav {
+				width: 1000px;
+				height: 40px;
+				margin: 5px auto;
+				background: palevioletred;
+			}
+			nav a {
+				float: left;
+				text-decoration: none;
+				line-height: 40px;
+				font-size: 16px;
+				color: white;
+				padding: 0px 15px;
+			}
+			#main {
+				width: 1000px;
+				height: 400px;
+				/*background: black;*/
+				margin: 5px auto;
+			}
+			#main aside {
+				width: 220px;
+				height: 400px;
+				background: greenyellow;
+				float: left;
+			}
+			#main article {
+				float: right;
+				width: 750px;
+				height: 380px;
+				background: plum;
+				
+				padding: 10px;
+			}
+			footer {
+				width: 1000px;
+				height: 150px;
+				background: deepskyblue;
+				margin: 5px auto;
+				
+				/*line-height: 150px;*/
+				/*text-align: center;*/
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+			头部header标签
+		</header>
+		<!--头部-->
+		
+		<!--导航条-->
+		<nav>
+			<a href="#">后盾人</a>
+			<a href="#">后盾人</a>
+			<a href="#">后盾人</a>
+			<a href="#">后盾人</a>
+			<a href="#">后盾人</a>
+			<a href="#">后盾人</a>
+		</nav>
+		<!--导航条-->
+		
+		<!--中间大区域-->
+		<div id="main">
+			<!--侧边栏-->
+			<aside>
+				请选择地区:
+				<br />
+				<select>
+					<optgroup label="山东省">
+						<option>济南</option>
+						<option>青岛</option>
+						<option>济宁</option>	
+					</optgroup>
+					<optgroup label="河北省">
+						<option>石家庄</option>
+						<option>邯郸</option>
+						<option>保定</option>
+						<option>廊坊</option>	
+					</optgroup>				
+				</select>
+				<br />
+				<br />
+				<!--进度条-->
+				<progress max="100" value="90"></progress>
+				<br />
+				<br />
+				<meter min="0" max="100" low="30" high="80" value="95"></meter>
+			</aside>
+			<!--侧边栏-->
+			<article>
+				<h1>各种水果的优点解析</h1>
+				发表时间：<time pubdate="2017-3-1">2017-3-1</time>
+				<!--<time datetime="2018-6-6">2018年6月6日</time>大家都去开会啊-->
+				<section>
+					<h2>苹果</h2>
+					<p>
+						苹果如果熟的话就好吃，不熟就不好吃苹果如果熟的话就好吃，<mark>不熟就不好吃苹果如果熟的话就好吃，不熟就不好吃苹果如果熟的话就好吃</mark>，不熟就不好吃苹果如果熟的话就好吃，不熟就不好吃苹果如果熟的话就好吃，不熟就不好吃苹果如果熟的话就好吃，<del>不熟就不好吃苹果如果熟的话就好吃</del>，不熟就不好吃苹果如果熟的话就好吃，不熟就不好吃苹果如果熟的话就好吃，不熟就不好吃苹果如果熟的话就好吃，不熟就不好吃苹果如果熟的话就好吃，不熟就不好吃苹果如果熟的话就好吃，不熟就不好吃苹果如果熟的话就好吃，不熟就不好吃苹果如果熟的话就好吃，不熟就不好吃
+					</p>
+				</section>
+				<section>
+					<h2>苹果</h2>
+					<p>
+						苹果如果熟的话就好吃，不熟就不好吃苹果如果熟的话就好吃，<ins>不熟就不好吃苹果如果熟的话就好吃</ins>，不熟就不好吃苹果如果熟的话就好吃，不熟就不好吃苹果如果熟的话就好吃，不熟就不好吃苹果如果熟的话就好吃，不熟就不好吃苹果如果熟的话就好吃，不熟就不好吃苹果如果熟的话就好吃，不熟就不好吃苹果如果熟的话就好吃，不熟就不好吃苹果如果熟的话就好吃，不熟就不好吃苹果如果熟的话就好吃，不熟就不好吃苹果如果熟的话就好吃，不熟就不好吃苹果如果熟的话就好吃，不熟就不好吃苹果如果熟的话就好吃，不熟就不好吃苹果如果熟的话就好吃，不熟就不好吃
+					</p>
+				</section>
+			</article>
+		</div>
+		<!--中间大区域-->
+		
+		<footer>
+			底部标签
+			<address>北京朝阳区顺白路12号 后盾IT教育楼</address>
+			<code>alert('你好');</code>
+		</footer>
+	</body>
+</html>

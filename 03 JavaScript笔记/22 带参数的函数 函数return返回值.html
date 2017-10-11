@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>22 带参数的函数 函数return返回值</title>
+
+    <script type="text/javascript">
+     	
+//		创建函数的步骤:
+//		1/想清楚你要实现啥功能
+//		2/把函数的框架搭起来
+//		3/确定需要的参数(原料)
+//		4/安排处理流程
+
+
+//		计算三个数的乘积的函数
+//		如果实参个数多于形参个数,那么多余的参数会被忽略,不会有任何错误
+//		如果实参个数少于实参个数,那么没有对应值的形参默认值就是undefined
+//		function chengji(x,y,z){//形参
+//			var re = x*y*z;
+//			document.write(re);
+//		}
+//		
+//		NaN = Not a Number
+//		var i = prompt('请输入第一个数字，计算三个数的乘积'),
+//			j = prompt('请输入第二个数字，计算三个数的乘积'),
+//			k = prompt('请输入第三个数字，计算三个数的乘积');
+//
+//		chengji(i,j,k);//实参
+
+
+//		function pingfang(x){
+//			var re = x*x;
+//			document.write(re);
+//		}
+//		
+//		var hd = prompt('请输入数字，计算该数字的平方');
+//		pingfang(hd);
+
+
+//		return语句
+
+//		函数遇到return,会立即返回结果,并且停止函数的执行
+		function chengji(x,y,z){
+			var re = x*y*z;
+			return re;
+		}
+		
+		var result = chengji(4,5,6);
+		
+		alert(result);
+	
+    </script>
+
+</head>
+<body>
+
+
+
+</body>
+</html>

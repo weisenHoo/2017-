@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>08 jquery显隐动画 轮播图开发1</title>
+	
+	<script src="jquery/jquery-1.11.3.min.js"></script>
+	
+	<style type="text/css">
+		
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		#fk {
+			width: 1200px;
+			height: 535px;
+			overflow: hidden;
+			border: 5px solid blueviolet;
+			margin: 20px auto;
+			position: relative;
+		}
+		#fk img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: none;
+		}
+		#fk ul {
+			position: absolute;
+			left: 528px;
+			bottom: 23px;
+		}
+		#fk ul li {
+			list-style: none;
+			width: 12px;
+			height: 12px;
+			background: #dddddd;
+			float: left;
+			margin-right: 8px;
+			/*css3圆角*/
+			border-radius: 50%;
+			cursor: pointer;
+		}
+	
+	</style>
+</head>
+<body>
+	
+	<!--<script type="text/javascript">
+		$(function(){
+//			给按钮加单击事件
+			$('#btn').click(function(){
+//				$('#gundan').css({'display':'none'});
+//				$('#gundan').hide();
+//				$('#gundan').show();
+
+//				自动控制显隐
+//				$('#gundan').toggle();
+			})
+		})
+	</script>-->
+	
+	<!--<script type="text/javascript">
+		
+		$(function(){
+			$('#btn').click(function(){
+//				$('#gundan').fadeOut();//隐藏
+//				$('#gundan').fadeIn();
+
+//				回调函数会在动画执行完毕后被调用
+//				$('#gundan').fadeOut(5000,function(){
+//					alert('哈哈哈！');
+//				});
+
+//				自动控制淡入淡出显隐
+				$('#gundan').fadeToggle();
+			})
+		})
+		
+	</script>-->
+	
+	<!--<input type="button" name="btn" id="btn" value="点我啊！！！" />
+	<br /><br />
+	<img src="gundan.jpg" id="gundan"/>
+	<h1>后盾人 人人做后盾</h1>-->
+	
+	
+	<!--凡客轮播图效果-->
+	<script type="text/javascript">
+		$(function(){
+
+//			大总管变量
+			var c = 0;
+			var timer = setInterval(function(){
+				c++;
+				c = (c==$("#fk img").length)?0:c;
+//				让c号图片显示,兄弟图片隐藏
+				$("#fk img").eq(c).fadeIn(500).siblings('img').fadeOut(500);
+//				让c号li变红
+				$("#fk ul li").eq(c).css({'background':'#a10000'}).siblings('li').css({'background':'#dddddd'});
+				
+//				链式操作
+//				例(张三.扇一巴掌.踢一脚.泼一盆水.同桌.给个拥抱)
+			},2000);
+			
+		})
+	</script>
+	<div id="fk">
+		<img src="images/1.jpg" style="display: block;"/>
+		<img src="images/2.jpg" />
+		<img src="images/3.jpg" />
+		<img src="images/4.jpg" />
+		<img src="images/5.jpg" />
+		<img src="images/6.jpg" />
+		<ul>
+			<li style="background: #a10000;"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</body>
+</html>

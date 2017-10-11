@@ -1,0 +1,33 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+li {
+	list-style: none;
+}
+
+
+#arclist li {
+	overflow: hidden;
+	border-bottom: 1px solid #f3f3f3;
+	padding: 10px 0px;
+}
+#arclist li img {
+	float: left;
+	width: 26%;
+	margin: 0 2%;
+}
+#arclist li h2 {
+	float: left;
+	width: 68%;
+	line-height: 1.6em;
+	font-size: 14px;
+	font-weight: normal;
+}
+#arclist li p {
+	float: left;
+	width: 68%;
+	line-height: 1.5em;
+	color: #9d9d9d;
+	font-size: 12px;
+}

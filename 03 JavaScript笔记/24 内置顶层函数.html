@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>24 内置顶层函数</title>
+
+    <script type="text/javascript">
+     	
+//		1.Number()		转换成数值类型
+//		2.parseInt()	将字符串转换为整形
+//		3.parseFloat()	转换为小数
+//		4.isNaN()		判断一个数能否转换为数值类型
+//		5.eval()		用JavaScript语法来解析字符串内容
+
+
+//		如果传入的数据不能被转成数字,呢么返回的是真true
+//		var hd = 'kkk';
+//		var re = isNaN(hd);
+//		document.write(re);
+
+
+//		var str = '1+1';
+//		var re = eval(str);
+//		document.write(re);
+		
+		
+		var num1 = prompt('请输入第一个数字');
+		var charset = prompt('请输入运算符，例如+-*/');
+		var num2 = prompt('请输入第二个数字');
+		
+		var str = eval(num1+charset+num2);
+		document.write(str);
+	
+    </script>
+
+</head>
+<body>
+
+
+
+</body>
+</html>

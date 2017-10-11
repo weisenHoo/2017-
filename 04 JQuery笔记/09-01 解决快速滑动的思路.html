@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>09 凡客轮播图的开发</title>
+	
+	<script src="jquery/jquery-1.11.3.min.js"></script>
+	
+	<style type="text/css">
+		
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		#hd {
+			width: 300px;
+			height: 500px;
+			background: blueviolet;
+			margin: 20px auto;
+		}
+	
+	</style>
+</head>
+<body>
+
+	<!--凡客轮播图效果-->
+	<script type="text/javascript">
+		$(function(){
+			
+			var timer;
+			
+//			给hd加鼠标移入事件			
+			$('#hd').mouseenter(function(){
+				timer = setTimeout(function(){
+					alert('哈哈哈！鼠标移入了');
+				},100);	
+			});
+			
+//			给hd加鼠标移出事件
+			$('#hd').mouseleave(function(){
+//				清理定时器
+				clearTimeout(timer);
+			});
+			
+		})
+	</script>
+	<div id="hd"></div>
+	
+</body>
+</html>

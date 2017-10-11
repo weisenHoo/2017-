@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>31 数组对象</title>
+    
+    <script type="text/javascript">
+    	
+		var shuiguo = ['苹果','鸭梨','水蜜桃','香蕉','西瓜','芒果'];
+		var jingdian = ['长城','故宫','颐和园','天坛'];
+//		shuiguo[shuiguo.length] = '芒果';
+//		document.write(shuiguo.length);
+		document.write(shuiguo+'<br/>');
+		
+//		向数组末尾追加新元素
+//		shuiguo.push('火龙果','榴莲');
+
+//		向数组开头追加新元素
+//		shuiguo.unshift('火龙果','榴莲');
+
+//		删除数组最后一个元素
+//		shuoguo.pop();
+
+//		删除数组的第一个元素
+//		shuiguo.shift();
+
+
+//		万能添加和删除
+
+//		第一个参数是指定从几号位置开始删除或添加
+//		第二个参数是指定删除几个元素
+		
+//		shuiguo.splice(2,3);//从2号开始删除,删除3个数据
+//		shuiguo.splice(2,3,'火龙果','葡萄');
+//		shuiguo.splice(3,0,'火龙果','葡萄');
+//		document.write(shuiguo);
+
+
+//		数组的截取
+//		slice不改变原数组,只会返回新的结果
+//		var re = shuiguo.slice(1,4);
+//		var re = shuiguo.slice(1,-1);
+//		var re = shuiguo.slice(1);
+
+//		将数组转换成字符串
+//		var re = shuiguo.join('');
+
+//		数组连接
+//		var re = shuiguo.concat(jingdian);
+		var re = shuiguo.concat(shuiguo);
+		document.write(re+'<br/>');
+		
+		
+//		作业
+//		1.写一个函数,传入一个数组,返回数组去重复之后的结果
+//		var arr = ['a','b','c','a','a','a','d','e','c','f','d']
+//		......
+//		var re = quchongfu(arr);		
+
+		
+//		2.写一个函数,传入一个数组,返回数组排序的结果
+//		var arr = [10,75,44,32,30,7]
+//		var re = sortNum(arr);
+//		结果:[7,10,30,32,44,75]
+
+    </script>
+
+</head>
+<body>
+
+
+</body>
+</html>

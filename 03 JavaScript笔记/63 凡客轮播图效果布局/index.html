@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>63 凡客轮播图效果布局</title>
+	
+	<style type="text/css">
+		
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		#fk {
+			width: 1200px;
+			height: 535px;
+			border: 5px solid blueviolet;
+			margin: 20px auto;
+			position: relative;
+		}
+		#fk img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: none;
+		}
+		#fk ul {
+			position: absolute;
+			left: 528px;
+			bottom: 23px;
+		}
+		#fk ul li {
+			list-style: none;
+			width: 12px;
+			height: 12px;
+			background: #dddddd;
+			float: left;
+			margin-right: 8px;
+			/*css3圆角*/
+			border-radius: 50%;
+			cursor: pointer;
+		}
+	
+	</style>
+	
+	<script type="text/javascript">
+		
+		window.onload = function(){
+			var fk = document.getElementById('fk');
+			var imgs = fk.getElementsByTagName('img');
+			var lis = fk.getElementsByTagName('li');
+			
+			for(var i=0;i<imgs.length;i++){
+				lis[i].xuhao = i;
+				lis[i].onmouseover = function(){
+					for(var i=0;i<imgs.length;i++){
+						imgs[i].style.display = 'none';
+						lis[i].style.background = '#dddddd';
+					}
+					imgs[this.xuhao].style.display = 'block';
+					lis[this.xuhao].style.background = '#a10000';
+				}
+			}
+		}
+		
+	</script>
+	
+</head>
+<body>
+	
+	<div id="fk">
+		<img src="images/1.jpg" style="display: block;"/>
+		<img src="images/2.jpg" />
+		<img src="images/3.jpg" />
+		<img src="images/4.jpg" />
+		<img src="images/5.jpg" />
+		<img src="images/6.jpg" />
+		<ul>
+			<li style="background: #a10000;"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	
+</body>
+</html>

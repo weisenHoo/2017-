@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>59 日期对象</title>
+    
+    <!--<script type="text/javascript">
+    	
+//  	创建日期对象
+    	
+//  	var time = new Date();
+//		要注意月份,js中月份是0-11来规定的,如果只咱们平常说的5月,那么写的时候应该写4
+//		var time = new Date(2017,4,8,11,58,0);//推荐写法(年,月,日,时,分,秒)
+		var time = new Date('2:1:6 4/8/2016');//时:分:秒 月/日/年
+		alert(time);
+    	
+    </script>-->
+    
+    <script type="text/javascript">
+    	
+//  	日期对象里的方法
+
+//  	获取日期信息的方法
+//		getFullYear()			获得日期对象中的年份
+//		getMonth()				获得日期对象中的月份(0 ~ 11)
+//		getDate()				获得日期对象中的日信息(1 ~ 31)
+//		getHours()				获得日期对象中的小时(0 ~ 23)
+//		getMinutes()			获得日期对象中的分钟(0 ~ 59)
+//		getSeconds()			获得日期对象中的秒数(0 ~ 59)
+//		getDay()				获得日期是周几(0代表周天,1-6分别代表周1-6)
+//		getTime()				获得日期对象中的日期与 1970 年 1 月 1 日相差的毫秒数
+
+		var time = new Date(2012,6,4,8,30,0);
+//		获得年份
+//		var re = time.getFullYear();//获得日期对象中的年份
+//		var re = time.getDay();//获得日期是周几(0代表周天,1-6分别代表周1-6)
+		var re = time.getTime();
+		alert(re);
+    	
+    </script>
+    
+    <script type="text/javascript">
+    	
+//  	作业
+//		写一个倒计时的效果,计算此时此刻到本年12月31日23点0分0秒相差的条数小时分数秒数
+    	
+    </script>
+	
+</head>
+<body>
+	
+	
+	
+</body>
+</html>

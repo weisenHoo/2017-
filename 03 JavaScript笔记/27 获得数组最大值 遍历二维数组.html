@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>27 获得数组最大值 遍历二维数组</title>
+    
+    <style type="text/css">
+    	body {
+    		padding: 10px;
+    	}
+    	.zuoYe {
+    		padding: 20px 0px;
+    	}
+    </style>
+</head>
+<body>
+
+	<div class="zuoYe zuoYe1">
+		<script type="text/javascript">
+     	
+	//		1.自己写一个函数,用来取得一个数组中的最大值
+			
+	//		函数是封闭的环境,形参只作用于函数内部,然后通过return给外界返回结果
+	//		在函数内部一般不调用外部数据,也不会在外部直接调用函数里面的数据
+	
+			var shuzu = [1,56,23,6,43,87,3,5,55];
+			
+	//		document.write(Math.max.apply(null,arr));
+			
+			function max(arr){			
+				var temp = arr[0];
+	//			循环数组,让数组元素挨个和temp变量去比较大小
+				for(var i=0;i<arr.length;i++){
+	//				如果arr[i]比temp大,那么就让temp里面存储arr[i]的值
+					if(temp<arr[i]){
+						temp = arr[i];					
+					}				
+				}			
+				return temp;
+			}
+			
+			var re = max(shuzu);
+			document.write(re);
+		
+	    </script>
+	</div>
+	
+	<div class="zuoYe zuoYe2">
+		<script type="text/javascript">
+     	
+	//		2.用for循环遍历二维数组(依次输出每个景点,每个景点后面都加上"很好玩"三个字)
+			var jindian = [
+							['狼牙山','白洋淀','北戴河'],
+							['黄山','九华山','天柱山'],
+							['少林寺','嵩山','龙门石窟','白马寺'],
+							['泰山','大明湖','趵突泉','梁山','沂蒙山','三孔'],
+							['平遥古城','五台山']
+			];
+			
+	//		document.write(jindian.length);
+			
+			for(var i=0;i<jindian.length;i++){
+//				循环i号子数组
+				for(var j=0;j<jindian[i].length;j++){
+					document.write(jindian[i][j]+'很好玩 <br />');
+				}
+			}
+		
+	    </script>
+	</div>
+	
+	<div class="zuoYe zuoYe3">
+		<script type="text/javascript">
+     	
+	//		3.写一个函数,传入一个二维数组,返回二维数组中长度最大的那个子数组的序号
+			var jindian = [
+							['狼牙山','白洋淀','北戴河'],
+							['黄山','九华山','天柱山'],
+							['少林寺','嵩山','龙门石窟','白马寺'],
+							['泰山','大明湖','趵突泉','梁山','沂蒙山','三孔'],
+							['平遥古城','五台山']
+			];
+			
+			function max(arr){
+				
+				var n = new Array();
+				
+				for(var i=0;i<arr.length;i++){
+	//				document.write(arr[i].length+'<br/>');
+					n[i] = arr[i].length;
+				}
+				
+				var temp = n[0];
+				
+				for(var j=0;j<n.length;j++){
+					if(temp<n[j]){
+						temp = n[j];
+					}
+				}
+				
+				for(var k=0;k<arr.length;k++){
+					if(arr[k].length == temp){
+						var z = k; 
+					}
+				}
+				
+				return z;
+			}
+			
+			var re = max(jindian);
+			document.write(re);
+		
+	    </script>
+	</div>
+
+
+</body>
+</html>

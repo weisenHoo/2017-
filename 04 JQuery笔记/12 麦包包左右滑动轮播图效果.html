@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>12 麦包包左右滑动轮播图效果</title>
+	
+	<script src="jquery/jquery-1.11.3.min.js"></script>
+	
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		#mbb {
+			width: 952px;
+			height: 440px;
+			border: 4px solid gainsboro;
+			margin: 10px auto;
+			position: relative;
+			/*overflow: hidden;*/
+		}
+		#mbb .con {
+			width: 4760px;
+			height: 440px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		#mbb .con img {
+			float: left;
+		}
+		#mbb ul {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+		#mbb ul li {
+			list-style: none;
+			float: left;
+			width: 116px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			color: white;
+			background: black;
+			opacity: 0.4;
+			font-size: 12px;
+			font-family: "宋体";
+			margin-left: 1px;
+		}
+		#mbb ul li:hover {
+			text-decoration: underline;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		
+	</script>
+	<div id="mbb">
+		<div class="con">
+			<!--img[src=images/$.jpg]*5-->
+			<img src="mbb/images/1.jpg" alt="" />
+			<img src="mbb/images/2.jpg" alt="" />
+			<img src="mbb/images/3.jpg" alt="" />
+			<img src="mbb/images/4.jpg" alt="" />
+			<img src="mbb/images/5.jpg" alt="" />
+		</div>
+		<ul>
+			<li style="opacity: 0.7;">率性摩登</li>
+			<li>个性街头风</li>
+			<li>通勤小包</li>
+			<li>优雅典范</li>
+			<li>法式小方包</li>
+		</ul>
+	</div>
+	
+</body>
+</html>

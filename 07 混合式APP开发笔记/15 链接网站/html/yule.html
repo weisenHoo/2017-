@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>娱乐</title>
+	<script src="../script/api.js"></script>
+	<link rel="stylesheet" href="../css/yule.css">
+</head>
+<body>
+
+<h1>娱乐</h1>
+
+<script>
+	apiready = function(){
+		// ajax
+		api.ajax({
+		    url: 'http://7senven.cn/api/ajax.json',
+		    charset: 'utf-8',
+		    method: 'get',
+		    dataType: 'json'
+		}, function(ret, err) {
+		    if(ret) {
+			    var id = ret[0].id,
+			    	typeid = ret[0].typeid,
+			    	title = ret[0].title,
+			    	litpic = ret[0].litpic,
+			    	pubdate = ret[0].pubdate;
+			    document.getElementById('hd').getElementsByTagName('ul')[0].getElementsByTagName('li')[0].innerHTML = id;
+			    document.getElementById('hd').getElementsByTagName('ul')[0].getElementsByTagName('li')[1].innerHTML = typeid;
+			    document.getElementById('hd').getElementsByTagName('ul')[0].getElementsByTagName('li')[2].innerHTML = title;
+			    document.getElementById('hd').getElementsByTagName('ul')[0].getElementsByTagName('li')[3].innerHTML = '<img src="http://7senven.cn'+litpic+'"/>';
+			    document.getElementById('hd').getElementsByTagName('ul')[0].getElementsByTagName('li')[4].innerHTML = pubdate;
+			}
+		});
+	}
+</script>
+
+<div id="hd">
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+
+</body>
+</html>

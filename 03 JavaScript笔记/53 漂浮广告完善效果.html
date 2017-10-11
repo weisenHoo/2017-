@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>53 漂浮广告完善效果</title>
+    
+    <style type="text/css">
+    	
+    	* {
+    		padding: 0;
+    		margin: 0;
+    	}
+    	#ad {
+    		width: 300px;
+    		height: 200px;
+    		/*border: 1px solid palevioletred;*/
+    		background: orangered;
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    	}
+    	#close {
+    		width: 40px;
+    		height: 15px;
+    		background: #222;
+    		color: #fff;
+    		line-height: 10px;
+    		text-align: center;
+    		cursor: pointer;
+    	}
+    	
+    </style>
+    
+    <script type="text/javascript">
+    	
+//  	漂浮广告
+		window.onload = function(){
+			
+//			抓元素
+			var ad = document.getElementById('ad');
+			var close = document.getElementById('close');
+			
+//			获得可视区域的宽高
+			var win_width = document.documentElement.clientWidth;
+			var win_height = document.documentElement.clientHeight;			
+			
+//			计算可以达到的最大的top和left值
+			var max_left = win_width-ad.offsetWidth;
+			var max_top = win_height-ad.offsetHeight;			
+			
+			var x=5,y=5;
+			
+//			定时器调用的函数
+			function run(){
+				
+//				获得旧的left和top值
+				var old_left = ad.offsetLeft;
+				var old_top = ad.offsetTop;
+				
+//				计算新的left和top值
+				var new_left = old_left+x;
+				var new_top = old_top+y;
+				
+				if(new_left>max_left){
+					new_left = max_left;
+				}
+				if(new_top>max_top){
+					new_top = max_top;
+				}
+				if(new_left<0){
+					new_left = 0;
+				}
+				if(new_top<0){
+					new_top = 0;
+				}
+				
+//				将新值赋值回去
+				ad.style.left = new_left+'px';
+				ad.style.top = new_top+'px';
+				
+				if(new_left==max_left || new_left==0){
+					
+					x = x*-1;
+					
+				}else if(new_top==max_top || new_top==0){
+					
+					y = y*-1;
+					
+				}
+				
+			}
+			
+//			设置定时器,每个一段时间就改变一下left和top
+			var timer = setInterval(run,3);
+
+//			给ad加移入事件
+			ad.onmouseover = function(){
+				
+//				清理定时器
+				clearInterval(timer);
+				
+			}
+			
+//			给ad加移出事件
+			ad.onmouseout = function(){
+				
+//				恢复定时器
+				timer = setInterval(run,3);
+				
+			}
+			
+//			给close加单击事件
+			close.onclick = function(){
+				
+//				让广告隐藏
+				ad.style.display = 'none';
+				
+			}
+			
+//			窗口改变事件
+			window.onresize = function(){
+				
+//				让广告归位
+				ad.style.left = 0;
+				ad.style.top = 0;
+				x=5;
+				y=5;
+//				获得可视区域的宽高
+				win_width = document.documentElement.clientWidth;
+				win_height = document.documentElement.clientHeight;			
+			
+//				计算可以达到的最大的top和left值
+				max_left = win_width-ad.offsetWidth;
+				max_top = win_height-ad.offsetHeight;
+				
+			}
+			
+		}
+    	
+    </script>
+	
+</head>
+<body>
+	
+	<div id="ad">
+		<div id="close">x</div>
+	</div>
+	
+</body>
+</html>

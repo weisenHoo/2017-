@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>03 html5新增表单属性1</title>
+		
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.onload = function(){
+//				var huakuai = document.getElementById('huakuai');
+////				给滑块加鼠标移动事件
+//				huakuai.onmousemove = function(){
+////					获得滑块的值,写入到title中
+//					document.title = huakuai.value;
+//				}
+				
+//				给颜色面板绑定onchange事件
+				document.getElementById('yanse').onchange = function(){
+					alert(this.value);
+				}
+				
+			}
+		</script>
+		<form action="">
+			用户名：<input type="text" />
+			<br /><br />
+			密码：<input type="password" />
+			<br /><br />
+			邮箱：<input type="email" />
+			<br /><br />
+			网址：<input type="url" />
+			<br /><br />
+			<input type="number" min="1" max="10" step="2" value="1" />
+			<br /><br />
+			<input type="range" min="0" max="20" step="2" id="huakuai" />
+			<br /><br />
+			<!--语义化的标签-->
+			<input type="search" />
+			<br /><br />
+			<!--<input type="time" />-->
+			<input type="date" />
+			<br /><br />
+			<input type="color" id="yanse" />
+			<br /><br />
+			<input type="submit" />
+		</form>
+		
+	</body>
+</html>

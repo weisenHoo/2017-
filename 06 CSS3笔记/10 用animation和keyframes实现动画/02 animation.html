@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style type="text/css">
+			
+			#hd {
+				width: 300px;
+				height: 150px;
+				background: dodgerblue;
+				/*参数:要绑定的运动名称 运动持续时间 运动曲线 延迟时间 重复次数 是否轮流反向播放动画*/
+				animation: run 3s ease-in 0.5s infinite;
+			}
+			
+			/*定义运动规则*/
+			/*@keyframes run{
+				from{
+					width: 300px;
+					height: 150px;
+				}
+				to{
+					width: 900px;
+					height: 500px;
+				}
+			}*/
+			
+			@keyframes run{
+				0%{
+					width: 300px;
+				}
+				50%{
+					width: 900px;
+				}
+				100%{
+					width: 300px;
+				}
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		
+		<div id="hd"></div>
+		
+	</body>
+</html>

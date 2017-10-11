@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>45 对元素内容的获得和设置 倒计时效果 乾坤大挪移效果</title>
+    
+    <style type="text/css">
+    	
+		
+    	
+   </style>
+  	
+  	<!--<script type="text/javascript">
+  	
+//		对元素内容的获得和设置    		
+  		window.onload = function(){
+			var btn = document.getElementById('btn');
+			var title = document.getElementById('title');
+			
+//			给按钮加时间
+			btn.onclick = function(){
+//				获得h1里所有的内容
+//				var con = title.innerHTML;
+//				alert(con);
+				
+//				设置元素的所有内容
+//				title.innerHTML = '我是新设置的！！！！哈哈哈';
+				
+//				获得纯文本内容
+//				if(document.all){//低版本的IE浏览器
+//					var con = title.innerText;
+//				}else{
+//					var con = title.textContent;
+//				}				
+
+//				兼容性的短路写法
+				var con = title.innerText || title.textContent;
+				
+				alert(con);
+			}
+
+  		}
+
+		
+  		
+  	</script>-->
+  	
+  	<!--<script type="text/javascript">
+  		
+  		window.onload = function(){
+//			抓元素
+			var span = document.getElementById('title').getElementsByTagName('span')[0];
+			var i = 5;
+			
+			var timer = setInterval(function(){
+//				获得当前的值
+				var oldnum = span.innerHTML;
+//				计算新的值
+				var newnum = oldnum - 1;
+//				将新的值赋值回去
+				span.innerHTML = newnum;
+				if(newnum==1){
+//					跳转
+					location.href = "http://houdunren.com";
+				}
+			},1000);
+  			
+  		}
+  		
+  	</script>-->
+  	
+  	<style type="text/css">
+  		#hd1 {
+  			width: 400px;
+  			height: 260px;
+  			border: 4px solid orange;
+  		}
+  		#hd2 {
+  			width: 400px;
+  			height: 230px;
+  			border: 4px solid blue;
+  		}
+  	</style>
+  	<script type="text/javascript">
+  		
+//		乾坤大挪移
+		window.onload = function(){
+			var btn = document.getElementById('btn');
+			var hd1 = document.getElementById('hd1');
+			var hd2 = document.getElementById('hd2');
+			var str = 0;
+			
+//			给按钮加单击事件
+			btn.onclick = function(){
+				if(str==0){
+//					获得hd1的内容
+					var con = hd1.innerHTML;
+//					将con的值写入到hd2中
+					hd2.innerHTML = con;
+//					将hd1清空
+					hd1.innerHTML = '';	
+					str = 1;
+				}else if(str==1){
+//					获得hd1的内容
+					var con = hd2.innerHTML;
+//					将con的值写入到hd2中
+					hd1.innerHTML = con;
+//					将hd1清空
+					hd2.innerHTML = '';	
+					str = 0;					
+				}
+			}
+		}
+  		
+  	</script>
+	
+</head>
+<body>
+	
+	<!--<input type="button" name="btn" id="btn" value="点我进行操作!" />
+	<h1 id="title">后盾人 人人做后盾!! <span>哦也</span></h1>-->
+	
+	
+	<!--<h1 id="title">亲，页面没找到，<span>5</span>秒后跳回后盾人首页</h1>-->
+	
+	
+	<div id="hd1">		
+		<h3>后盾人 人人做后盾!! </h6>
+		<img src="dan.gif" alt="" />
+	</div>	
+	<br />
+	<input type="button" name="btn" id="btn" value="乾坤大挪移" />
+	<br />
+	<br />
+	<div id="hd2"></div>
+	
+</body>
+</html>

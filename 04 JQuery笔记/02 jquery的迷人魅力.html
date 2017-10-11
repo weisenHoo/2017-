@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>02 jquery的迷人魅力</title>
+	
+	<script src="jquery/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+	
+	<script type="text/javascript">
+		
+//		原生js代码
+//		window.onload = function(){
+//			var lis = document.getElementById('list').getElementsByTagName('li');
+//			
+//			for(var i=0;i<lis.length;i++){
+//				lis[i].style.color = 'red';
+//			}
+//		}
+		
+	</script>
+	
+	<script type="text/javascript">
+		
+		$(function(){
+			$('#list li').css('color','red');
+		})
+		
+	</script>
+	
+	<ul id="list">
+		<li>后盾人，人人做后盾</li>
+		<li>后盾人，人人做后盾</li>
+		<li>后盾人，人人做后盾</li>
+		<li>后盾人，人人做后盾</li>
+		<li>后盾人，人人做后盾</li>
+		<li>后盾人，人人做后盾</li>
+		<li>后盾人，人人做后盾</li>
+		<li>后盾人，人人做后盾</li>
+	</ul>
+	
+</body>
+</html>

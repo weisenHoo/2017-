@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>43 图片自动显隐效果 图片加速跑 图片折返跑</title>
+    
+    <style type="text/css">
+    	
+    	body {
+    		position: relative;
+    	}
+		#dan {
+			position: absolute;
+			top: 50px;
+		}
+		#hd {
+			background: paleturquoise;
+			margin: 20px auto;
+		}
+    	
+    </style>
+    
+  
+  	<script type="text/javascript">
+
+//		作业
+//		1.点击按钮自动切换图片的显隐状态
+//		window.onload = function(){
+//			
+//			var btn = document.getElementById("btn");
+//			var img = document.getElementById("img");
+//			var sta = 1;//对应图片的显示状态  2对应隐藏状态
+//			
+////		给按加家单击事件
+//			btn.onclick = function(){
+//				if(sta==1){//现在处于显示状态
+//					img.style.display = 'none';
+//					sta = 2;
+//				}else if(sta==2){//现在处于隐藏状态
+//					img.style.display = 'block';
+//					sta = 1;
+//				}
+//			}
+//			
+//		}
+
+
+//		2.点击按钮,让图片来回跑
+//		window.onload = function(){
+////			
+//			var btn = document.getElementById("btn");
+//			var dan = document.getElementById("dan");
+//			
+//			
+////		给按钮家单击事件
+//			btn.onclick = function(){
+//				设置定时器,每隔一秒钟就变化一次left
+//				setInterval(function(){	
+////					获得旧的left
+//					var old_left = dan.style.left;	
+////					获得新的left
+//					var new_left = parseInt(old_left) + speed;
+////					赋值回去
+//					dan.style.left = new_left + "px";	
+////					判断边界
+//					if(new_left==600 || new_left==0){
+////						alert("小伙，该回来了");
+//						speed = speed*-1;
+//					}
+//				},50);										
+//				
+//			}
+//			
+//		}
+
+//		3.点击按钮,让图片加速跑
+//		window.onload = function(){
+//			var btn = document.getElementById("btn");
+//			var dan = document.getElementById("dan");
+//			var speed = 1;
+////			给按钮家单击事件
+//			btn.onclick = function(){
+////				设置定时器,每隔一秒钟就变化一次left
+//				var timer = setInterval(function(){	
+////					speed++;
+//					speed = speed*1.05;
+////					获得旧的left
+//					var old_left = dan.style.left;	
+////					获得新的left
+//					var new_left = parseInt(old_left) + speed;
+////					赋值回去
+//					dan.style.left = new_left + "px";	
+//				},50);										
+//				
+//			}
+//		}
+		
+  	</script>
+  	
+  	<script type="text/javascript">
+  		
+//		作业
+//		一个200*200大小的div,逐渐变大到500*500,然后缩小回200*200,循环往复
+		window.onload = function(){
+			
+			var btn = document.getElementById("btn");
+			var hd = document.getElementById("hd");
+			var speed = 10;
+			var timer;
+			
+			btn.onclick = function(){	
+				clearInterval(timer);
+				timer = setInterval(function(){
+					var old_width = hd.style.width,
+						old_height = hd.style.height;
+					var new_width = parseInt(old_width) + speed,
+						new_height = parseInt(old_height) + speed;
+					
+					hd.style.width = new_width + "px";
+					hd.style.height = new_height + "px";	
+					
+					if((new_width==500 && new_height==500) || (new_width==200 && new_height==200)){
+//						clearInterval(timer);
+						speed = speed*-1;
+					}
+				},100);
+				
+//				alert();
+			}
+			
+		}
+  		
+  	</script>
+	
+</head>
+<body>
+	<a href="定时器叠加的处理方法.html" id="bug">定时器叠加的处理方法</a><br />
+	<input type="button" name="" id="btn" value="点我啊！！！" />
+	
+	<br />
+
+	<!--<img src="01.jpg" alt="" id="img"/>-->
+	<div id="hd" style="width: 200px; height: 200px;"></div>
+	<!--<img src="dan.gif" alt="" id="dan" style="left: 0px;"/>-->
+	
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>04 jquery选择器2</title>
+	
+	<script src="jquery/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		$(function(){
+//			原来讲过的所有的css的选择器,在jquery中都能正常使用
+//			$("#box div p").css({'color':'red','font-size':'25px'});
+
+//			选择的是#box里所有处在隐藏状态下的p标签
+//			$("#box p:hidden").css({'color':'red','font-size':'25px','display':'block'});			
+
+//			选择的是#box里所有处在显示状态下的p标签
+//			$("#box p:visible").css({'color':'red','font-size':'25px'});			
+
+//			选择的是#box里所有有class属性的p标签
+//			$("#box p[class]").css({'color':'red','font-size':'25px'});			
+//			$("#box p[hd]").css({'color':'red','font-size':'25px'});			
+
+//			选择的是#box里所有hd属性的值等于houdun的元素				
+//			$("#box p[hd=houdun]").css({'color':'red','font-size':'25px'});			
+
+//			选择的是#box里所有class不等于er的p标签
+//			$("#box p[class!=er]").css({'color':'red','font-size':'25px'});			
+
+//			选择的是#box里class属性值是以ho开头的p标签
+//			$("#box p[class^=ho]").css({'color':'red','font-size':'25px'});	
+//			结尾
+//			$("#box p[class^=ho]").css({'color':'red','font-size':'25px'});		
+			
+//			选择的是#box里class属性值中含有un字符串的p标签
+//			$("#box p[class*=un]").css({'color':'red','font-size':'25px'});	
+//			$("#box p[class*=e]").css({'color':'red','font-size':'25px'});			
+
+//			选择的是#box里有value属性,并且class属性中含有e,并且hd属性的值是houdun的p标签
+			$("#box p[value][class*=e][hd=houdun]").css({'color':'red','font-size':'25px'});			
+		})
+	</script>
+	
+	<div id="box">
+		<p>后盾人 人人做后盾0</p>
+		<p class="one" hd="houdun" value="hhh">后盾人 人人做后盾1</p>
+		<p class="er">后盾人 人人做后盾2</p>
+		<p>后盾人 人人做后盾3 <span>我是span</span></p>
+		<p>后盾人 人人做后盾4</p>
+		<p style="display: none;">后盾人 人人做后盾5</p>
+		<p class="houdunliu">后盾人 人人做后盾6 <span>我是span</span></p>
+		<p class="houdunqi">后盾人 人人做后盾7</p>		
+		<p></p>
+		<p></p>
+		<div>
+			<p>我们也是p标签</p>
+			<p>我们也是p标签</p>
+			<p>我们也是p标签</p>
+			<p>我们也是p标签</p>
+			<p>我们也是p标签</p>
+		</div>
+	</div>
+</body>
+</html>

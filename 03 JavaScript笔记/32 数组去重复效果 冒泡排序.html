@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>32 数组去重复效果 冒泡排序</title>
+    
+    <script type="text/javascript">
+    	
+//		1.写一个函数,传入一个数组,返回数组去重复之后的结果
+//		var arr = ['a','b','c','a','a','a','d','e','c','f','d']
+//		......
+//		var re = quchongfu(arr);		
+		
+		
+		function quChongFu(arr){					
+			
+			var res = [];	
+			
+			for(var i=0;i<arr.length;i++){
+				var repeat = false;
+				for(var j=0;j<res.length;j++){
+					if(arr[i] == res[j]){
+						repeat = true;
+						break;
+					}
+				}
+				if(!repeat){
+					res.push(arr[i]);
+				}
+			}	
+			return res;
+		}
+		
+		function qcf(arr){					
+			for(var i=0;i<arr.length;i++){
+//				让i号元素去跟它后面的元素进行比较
+//				循环i号元素后面的元素,让后面的元素挨个的和i号元素进行比较
+				for(var j=i+1;j<arr.length;j++){
+					if(arr[i]==arr[j]){
+//						删除j号元素
+						arr.splice(j,1);
+						j--;//判断两次
+					}
+				}
+			}
+			return arr;
+		}
+		
+		var shuzu1 = ['a','b','c','a','a','a','d','e','c','f','d','g','g','h','h','','i','i'];
+//		var re = quChongFu(shuzu1);
+		var re = qcf(shuzu1);
+		document.write(re+'<br/>');
+
+    </script>
+    
+    <script type="text/javascript">
+    	
+//		2.写一个函数,传入一个数组,返回数组排序的结果
+//		var arr = [10,75,44,32,30,7]
+//		var re = sortNum(arr);
+//		结果:[7,10,30,32,44,75]
+
+//		冒泡排序
+		function paiXu(arr){
+			for(var j=0;j<arr.length-1;j++){
+				for(var i=0;i<arr.length-1;i++){
+//					将i号元素和i+1号元素进行对比,如果i号元素大于i+1号元素,就调换位置
+					if(arr[i]>arr[i+1]){
+						var temp = arr[i]
+						arr[i] = arr[i+1];
+						arr[i+1] = temp;
+					}
+				}
+			}
+			
+			
+			return arr;
+		}
+		
+//		专门用来排序的函数
+		function sortNum(x,y){
+			return x-y;
+//			return y-x;//降序排序
+		}
+		
+		var shuzu2 = [10,75,44,32,30,7,5,125,3,9]
+//		var re = paiXu(shuzu2);
+//		sort排序方法(js自带的排序函数)
+		var re = shuzu2.sort(sortNum);
+		document.write(re);
+    	
+    </script>
+
+</head>
+<body>
+
+
+</body>
+</html>
